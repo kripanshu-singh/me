@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+
+# Block access to source files
+Disallow: /assets/vendor/
+Disallow: /assets/js/
+Disallow: /*.json
+
+# Allow important files
+Allow: /assets/img/
+Allow: /assets/css/
+Allow: /assets/documents/
+
+# Sitemap location
+Sitemap: https://www.kripanshu.me/sitemap.xml
+
+# Additional instructions for major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Crawl delay (optional, helps with server load)
+Crawl-delay: 1
