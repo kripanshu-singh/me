@@ -10,14 +10,14 @@
   --bg-color: #8cfba4;
   --bg-color-light: #e2fced;
   --text-color-hover: #4c5656;
-  --box-shadow-color: rgba(184, 249, 211, 0.48);
+  --box-shadow-color: #10da3c8b;
   --url: url("../img/select/ml.png");
 }
 .clol {
   --bg-color: #ceb2fc;
   --bg-color-light: #f0e7ff;
   --text-color-hover: #fff;
-  --box-shadow-color: rgba(206, 178, 252, 0.48);
+  --box-shadow-color: #6200ff8b;
   --url: url("../img/select/dl.png");
 }
 .nextlol {
@@ -31,7 +31,7 @@
   --bg-color: #8bc34a9f;
   --bg-color-light: #ffffff;
   --text-color-hover: #ffffff;
-  --box-shadow-color: #ffffff;
+  --box-shadow-color: #66b9077d;
   --url: url("../img/select/spring.png");
 }
 
@@ -39,14 +39,14 @@
   --bg-color: #479cec78;
   --bg-color-light: #ffffff;
   --text-color-hover: #000000a0;
-  --box-shadow-color: #ffffff;
+  --box-shadow-color: #0084ff78;
   --url: url("../img/select/Docker.png");
 }
 .nestlol {
   --bg-color: #e21e4f91;
   --bg-color-light: #ffffff;
   --text-color-hover: #0000009d;
-  --box-shadow-color: #ffffff;
+  --box-shadow-color: #ff00406c;
   --url: url("../img/select/Nest.png");
 }
 
@@ -54,14 +54,14 @@
   --bg-color: #d0cfcfa5;
   --bg-color-light: #ffffff;
   --text-color-hover: #ffffff;
-  --box-shadow-color: rgba(132, 132, 132, 0.48);
+  --box-shadow-color: #a831318e;
   --url: url("../img/select/tkinter-pluma.png");
 }
 .elol {
   --bg-color: #7cb28c;
   --bg-color-light: #e2fced;
   --text-color-hover: #fff;
-  --box-shadow-color: rgba(184, 249, 211, 0.48);
+  --box-shadow-color: #1db34a87;
   --url: url("../img/select/dj.png");
 }
 
@@ -69,21 +69,21 @@
   --bg-color: #9be9ff;
   --bg-color-light: #f1f7ff;
   --text-color-hover: #4c5656;
-  --box-shadow-color: rgba(220, 233, 255, 0.48);
+  --box-shadow-color: #9be9ff;
   --url: url("../img/select/rec.png");
 }
 .redislol {
   --bg-color: #a42121d7;
   --bg-color-light: #ffffff;
   --text-color-hover: #ffffff;
-  --box-shadow-color: #ffffff;
+  --box-shadow-color: #a42121d7;
   --url: url("../img/select/Redis.png");
 }
 .gcplol {
   --bg-color: #f6be0498;
   --bg-color-light: #ffffff;
   --text-color-hover: #ffffff;
-  --box-shadow-color: #ffffff;
+  --box-shadow-color: #f6be0498;
   --url: url("../img/select/gcp.png");
 }
 
@@ -91,7 +91,7 @@
   --bg-color: #f2541fc8;
   --bg-color-light: #ffffff;
   --text-color-hover: #ffffff;
-  --box-shadow-color: #ffffff;
+  --box-shadow-color: #f2541fc8;
   --url: url("../img/select/git.png");
 }
 
@@ -99,21 +99,21 @@
   --bg-color: #9dc58a;
   --bg-color-light: #f0e7ff;
   --text-color-hover: #fff;
-  --box-shadow-color: rgba(206, 178, 252, 0.48);
+  --box-shadow-color: #9dc58a;
   --url: url("../img/select/mon2.png");
 }
 .hlol {
   --bg-color: #fd7e7e;
   --bg-color-light: #f1f7ff;
   --text-color-hover: #fff;
-  --box-shadow-color: rgba(220, 233, 255, 0.48);
+  --box-shadow-color: #fd7e7e;
   --url: url("../img/select/sql.png");
 }
 .ilol {
   --bg-color: #9fc34b;
   --bg-color-light: #ffffff;
   --text-color-hover: #fff;
-  --box-shadow-color: rgba(255, 215, 97, 0.48);
+  --box-shadow-color: #9fc34b;
   --url: url("../img/select/node.png");
 }
 
@@ -121,21 +121,21 @@
   --bg-color: #757bca;
   --bg-color-light: #e2fced;
   --text-color-hover: #fff;
-  --box-shadow-color: rgba(184, 249, 211, 0.48);
+  --box-shadow-color: #757bca;
   --url: url("../img/select/renat.png");
 }
 .klol {
   --bg-color: #8cceed;
   --bg-color-light: #f0e7ff;
   --text-color-hover: #fff;
-  --box-shadow-color: rgba(206, 178, 252, 0.48);
+  --box-shadow-color: #8cceed;
   --url: url("../img/select/ip2.png");
 }
 .llol {
   --bg-color: #ffe69c;
   --bg-color-light: #f1f7ff;
   --text-color-hover: #4c5656;
-  --box-shadow-color: rgba(220, 233, 255, 0.48);
+  --box-shadow-color: #ffe69c;
   --url: url("../img/select/logi.png");
 }
 
