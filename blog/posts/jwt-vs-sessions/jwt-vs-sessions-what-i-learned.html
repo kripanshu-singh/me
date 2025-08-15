@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      JWT vs. Sessions: A Practical Guide from Building Apps - Kripanshu Singh
+    </title>
+    <meta
+      name="description"
+      content="A deep dive into choosing between JWT and Session-based authentication, based on real-world experience building a full-stack application."
+    />
+
+    <!-- Canonical Link for SEO -->
+    <link
+      rel="canonical"
+      href="https://www.kripanshu.me/blog/posts/jwt-vs-sessions-what-i-learned.html"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Prism.js for Code Highlighting -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Blog CSS -->
+    <link rel="stylesheet" href="../assets/css/blog.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="../../circle1.png" />
+  </head>
+  <body>
+    <div class="d-flex">
+      <!-- Vertical Sidebar Navigation -->
+      <header id="header" class="d-flex flex-column justify-content-center">
+        <nav id="navbar" class="navbar nav-menu">
+          <ul>
+            <li>
+              <a href="../../index.html" class="nav-link"
+                ><i class="bi bi-house"></i> <span>Home</span></a
+              >
+            </li>
+            <li>
+              <a href="../../index.html#about" class="nav-link"
+                ><i class="bi bi-person"></i> <span>About</span></a
+              >
+            </li>
+            <li>
+              <a href="../../index.html#resume" class="nav-link"
+                ><i class="bi bi-file-earmark-text"></i> <span>Resume</span></a
+              >
+            </li>
+            <li>
+              <a href="../../index.html#portfolio" class="nav-link"
+                ><i class="bi bi-journal-richtext"></i>
+                <span>Portfolio</span></a
+              >
+            </li>
+            <li>
+              <a href="../index.html" class="nav-link active"
+                ><i class="bi bi-pencil-square"></i> <span>Blog</span></a
+              >
+            </li>
+            <li>
+              <a href="../../index.html#contact" class="nav-link"
+                ><i class="bi bi-envelope"></i> <span>Contact</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Main Article Content -->
+      <main id="main-content">
+        <div class="container py-5">
+          <div class="row justify-content-center">
+            <div class="col-lg-11 col-xl-9">
+              <article class="blog-post">
+                <div class="post-hero-image mb-4">
+                  <!-- Placeholder for a custom illustration you can create on Canva -->
+                  <img
+                    src="https://placehold.co/1200x600/040404/149ddd?text=JWT+vs+Sessions"
+                    alt="JWT vs Sessions Illustration"
+                    class="img-fluid rounded"
+                  />
+                </div>
+
+                <header class="mb-4 text-center">
+                  <h1 class="post-title">
+                    JWT vs. Sessions: A Practical Guide from Building My
+                    Claim-App
+                  </h1>
+                  <div
+                    class="post-meta d-flex justify-content-center align-items-center gap-3 text-muted mt-3"
+                  >
+                    <span><i class="bi bi-calendar3"></i> Aug 15, 2025</span>
+                    <span><i class="bi bi-clock"></i> 6 min read</span>
+                    <span><i class="bi bi-folder2"></i> Backend, Security</span>
+                  </div>
+                </header>
+
+                <p class="lead">
+                  When building any secure web application, one of the first
+                  critical decisions is how to manage user authentication.
+                  Should you use traditional sessions or modern JSON Web Tokens
+                  (JWTs)? I faced this exact choice when developing my
+                  full-stack insurance application, Claim-App. Here’s a
+                  breakdown of what I learned.
+                </p>
+
+                <hr class="my-4" />
+
+                <section>
+                  <h2>The Core Problem: How Do We Remember a User?</h2>
+                  <p>
+                    HTTP, the protocol of the web, is stateless. This means
+                    every request a user makes to a server is independent. The
+                    server has no memory of previous requests. So, if you log
+                    in, how does the server remember you on the next page you
+                    visit? This is where authentication management strategies
+                    like Sessions and JWTs come in.
+                  </p>
+                </section>
+
+                <section>
+                  <h2>Approach #1: Server-Side Sessions</h2>
+                  <p>
+                    In a traditional session-based model, the server does the
+                    heavy lifting. When a user logs in, the server creates a
+                    unique session ID, stores user data against that ID on the
+                    server (in memory or a database), and then sends just the
+                    session ID back to the user's browser in a cookie.
+                  </p>
+                  <img
+                    src="https://placehold.co/800x400/0c0c0c/a8a9b4?text=Session+Flow+Diagram"
+                    class="img-fluid rounded my-3"
+                    alt="Diagram showing session flow"
+                  />
+                </section>
+
+                <section>
+                  <h2>Approach #2: JSON Web Tokens (JWTs)</h2>
+                  <p>
+                    JWTs flip the model. Instead of the server storing user
+                    information, the information is encoded directly into a
+                    "token" and given to the client. This token is a long,
+                    cryptographically signed string. The client then stores this
+                    token and sends it with every request. The server can verify
+                    the token's signature using its secret key without needing
+                    to look up anything in a database.
+                  </p>
+                  <img
+                    src="https://placehold.co/800x400/0c0c0c/a8a9b4?text=JWT+Flow+Diagram"
+                    class="img-fluid rounded my-3"
+                    alt="Diagram showing JWT flow"
+                  />
+                </section>
+
+                <section>
+                  <h2>At a Glance: Comparison Table</h2>
+                  <div class="table-responsive">
+                    <table class="table table-dark table-bordered">
+                      <thead>
+                        <tr>
+                          <th scope="col">Feature</th>
+                          <th scope="col" class="text-center">Sessions</th>
+                          <th scope="col" class="text-center">JWTs</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><strong>State Management</strong></td>
+                          <td>Stateful (Server stores session data)</td>
+                          <td>Stateless (Server stores nothing)</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Scalability</strong></td>
+                          <td>Challenging with microservices</td>
+                          <td>Excellent for microservices</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Security (Invalidation)</strong></td>
+                          <td>Easy (Delete session on server)</td>
+                          <td>Hard (Requires token blacklist)</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Performance</strong></td>
+                          <td>Requires database lookup on each request</td>
+                          <td>Fast verification (no DB lookup needed)</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+
+                <section>
+                  <h2>The Deciding Factor: My Experience with Claim-App</h2>
+                  <p>
+                    For my
+                    <a
+                      href="https://claim-management.vercel.app/"
+                      target="_blank"
+                      >Claim-App</a
+                    >
+                    project, I needed to ensure that the user's authentication
+                    state could be verified by multiple potential services in
+                    the future. Because of this focus on **scalability**, I
+                    chose JWTs. It meant that I wouldn't have to worry about
+                    managing a centralized session store if I decided to split
+                    the backend into separate microservices.
+                  </p>
+                  <p>
+                    Here’s a simplified look at the middleware I used in my
+                    Express.js backend to protect routes:
+                  </p>
+                  <pre><code class="language-javascript">
+// A simplified middleware to verify a JWT
+const jwt = require('jsonwebtoken');
+
+function authMiddleware(req, res, next) {
+  // Get token from the Authorization header: "Bearer TOKEN"
+  const authHeader = req.headers['authorization'];
+  const token = authHeader && authHeader.split(' ')[1];
+
+  if (token == null) {
+    return res.sendStatus(401); // Unauthorized
+  }
+
+  jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
+    if (err) {
+      return res.sendStatus(403); // Forbidden (invalid token)
+    }
+    req.user = user;
+    next(); // Proceed to the protected route
+  });
+}
+</code></pre>
+                </section>
+
+                <section>
+                  <h2>Conclusion: My Recommendation</h2>
+                  <blockquote class="blockquote">
+                    <p>
+                      "The choice isn't about which is 'better,' but which is
+                      right for your architecture."
+                    </p>
+                  </blockquote>
+                  <ul>
+                    <li>
+                      <strong>Choose Sessions if:</strong> You are building a
+                      simple, monolithic application and need the ability to
+                      immediately log a user out from the server-side.
+                    </li>
+                    <li>
+                      <strong>Choose JWTs if:</strong> You are building an
+                      application that needs to scale, might use microservices,
+                      or has a decoupled frontend and backend.
+                    </li>
+                  </ul>
+                </section>
+
+                <hr class="my-4" />
+                <!-- Author Bio Section -->
+                <div
+                  class="author-box d-flex align-items-center gap-3 p-3 rounded"
+                >
+                  <img
+                    src="../../assets/img/pixelcut-export-1731953948845~2.png"
+                    class="author-img rounded-circle"
+                    alt="Kripanshu Singh"
+                  />
+                  <div>
+                    <h5 class="mb-0">Written by Kripanshu Singh</h5>
+                    <p class="mb-0 text-muted">
+                      Software Engineer specializing in backend systems and
+                      full-stack development. Passionate about building scalable
+                      and secure applications.
+                      <a href="../../index.html#contact">Get in touch.</a>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <!-- Footer -->
+        <footer class="text-center py-4 mt-auto">
+          <p>
+            &copy; <span id="copyright-year"></span> Kripanshu Singh. All Rights
+            Reserved.
+          </p>
+        </footer>
+      </main>
+    </div>
+
+    <!-- Prism.js for Code Highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+    <script>
+      document.getElementById("copyright-year").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>
