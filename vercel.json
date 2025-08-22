@@ -61,7 +61,7 @@
       ]
     },
     {
-      "source": "/blog/posts/*/assets/(.*)",
+      "source": "/blog/posts/(.*)/assets/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
