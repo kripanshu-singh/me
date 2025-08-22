@@ -1,15 +1,20 @@
 User-agent: *
 Allow: /
 
-# Block access to source files
+# Block access to source files and vendor libraries
 Disallow: /assets/vendor/
 Disallow: /assets/js/
+Disallow: /blog/assets/vendor/
+Disallow: /blog/assets/js/
 Disallow: /*.json
 
-# Allow important files
+# Allow important content directories
 Allow: /assets/img/
 Allow: /assets/css/
 Allow: /assets/documents/
+Allow: /blog/
+Allow: /blog/posts/
+Allow: /blog/assets/img/
 
 # Sitemap location
 Sitemap: https://www.kripanshu.me/sitemap.xml
@@ -17,6 +22,8 @@ Sitemap: https://www.kripanshu.me/sitemap.xml
 # Additional instructions for major search engines
 User-agent: Googlebot
 Allow: /
+# Higher crawl priority for blog content
+Allow: /blog/
 
 User-agent: Bingbot
 Allow: /
@@ -24,5 +31,9 @@ Allow: /
 User-agent: LinkedInBot
 Allow: /
 
-# Crawl delay (optional, helps with server load)
+# Faster crawling for fresh blog content
+User-agent: Googlebot
 Crawl-delay: 1
+
+# Standard crawl delay for other bots
+Crawl-delay: 2

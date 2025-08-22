@@ -1,0 +1,49 @@
+{
+  "name": "Kripanshu Singh - Software Engineer",
+  "short_name": "Kripanshu Singh",
+  "description": "Software Engineer portfolio and blog featuring practical guides on web development, authentication, and backend technologies",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0563bb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/img/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["business", "productivity", "education"],
+  "lang": "en-US",
+  "scope": "/",
+  "screenshots": [
+    {
+      "src": "/assets/img/pixelcut-export-1731953948845~2.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "label": "Kripanshu Singh - Software Engineer Portfolio"
+    }
+  ]
+}

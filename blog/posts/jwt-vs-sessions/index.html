@@ -3,21 +3,129 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>
-      JWT vs Sessions: What I Learned Building Apps - Kripanshu Singh
-    </title>
+
+    <!-- Enhanced SEO Title -->
+    <title>JWT vs Sessions: Complete Authentication Guide 2025</title>
+
+    <!-- Enhanced Meta Description -->
     <meta
       name="description"
-      content="A comprehensive comparison between JWT and session-based authentication, exploring their pros, cons, and real-world implementation scenarios."
-    />
-    <meta
-      name="keywords"
-      content="JWT, Sessions, Authentication, Web Security, Backend Development, Token-based Authentication"
+      content="Confused about JWT vs sessions? Software Engineer Kripanshu Singh explains both authentication methods with practical examples, code samples, and a quick decision framework. Learn which one to choose for your next project."
     />
 
-    <!-- Favicons -->
-    <link href="../../assets/img/favicon.png" rel="icon" />
-    <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <!-- Enhanced Keywords -->
+    <meta
+      name="keywords"
+      content="JWT vs Sessions, Authentication Guide, Web Development, Backend Security, JavaScript Authentication, Node.js Auth, Kripanshu Singh, Software Engineer, API Security, Session Management, JSON Web Tokens, Express.js Authentication, React Authentication, Full Stack Development"
+    />
+
+    <!-- Author and Publication Info -->
+    <meta name="author" content="Kripanshu Singh" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <link
+      rel="canonical"
+      href="https://www.kripanshu.me/blog/posts/jwt-vs-sessions/"
+    />
+
+    <!-- Open Graph Tags for Social Media -->
+    <meta
+      property="og:title"
+      content="JWT vs Sessions: Complete Authentication Guide 2025"
+    />
+    <meta
+      property="og:description"
+      content="Software Engineer explains JWT vs Sessions with practical examples, code samples, and a quick decision framework. Learn which authentication method to choose for your project."
+    />
+    <meta
+      property="og:image"
+      content="https://www.kripanshu.me/blog/posts/jwt-vs-sessions/assets/jwt_vs_session.png"
+    />
+    <meta
+      property="og:url"
+      content="https://www.kripanshu.me/blog/posts/jwt-vs-sessions/"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:site_name"
+      content="Kripanshu Singh - Software Engineer Blog"
+    />
+    <meta property="article:author" content="Kripanshu Singh" />
+    <meta property="article:published_time" content="2025-08-22T00:00:00Z" />
+    <meta property="article:modified_time" content="2025-08-22T00:00:00Z" />
+    <meta property="article:section" content="Web Development" />
+    <meta property="article:tag" content="JWT" />
+    <meta property="article:tag" content="Sessions" />
+    <meta property="article:tag" content="Authentication" />
+    <meta property="article:tag" content="Backend Development" />
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="JWT vs Sessions: Complete Authentication Guide 2025"
+    />
+    <meta
+      name="twitter:description"
+      content="Software Engineer explains JWT vs Sessions with practical examples and decision framework."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.kripanshu.me/blog/posts/jwt-vs-sessions/assets/jwt_vs_session.png"
+    />
+    <meta name="twitter:creator" content="@kripanshu_singh" />
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "JWT vs Sessions: Complete Authentication Guide 2025",
+        "description": "Software Engineer explains JWT vs Sessions with practical examples, code samples, and a quick decision framework. Learn which authentication method to choose for your project.",
+        "image": "https://www.kripanshu.me/blog/posts/jwt-vs-sessions/assets/jwt_vs_session.png",
+        "author": {
+          "@type": "Person",
+          "name": "Kripanshu Singh",
+          "url": "https://www.kripanshu.me/",
+          "jobTitle": "Software Engineer",
+          "description": "Software Engineer specializing in backend systems and full-stack applications with experience at Aarogya ID and Messold Technologies"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Kripanshu Singh",
+          "url": "https://www.kripanshu.me/"
+        },
+        "datePublished": "2025-08-22",
+        "dateModified": "2025-08-22",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.kripanshu.me/blog/posts/jwt-vs-sessions/"
+        },
+        "keywords": [
+          "JWT",
+          "Sessions",
+          "Authentication",
+          "Web Development",
+          "Backend Security"
+        ],
+        "wordCount": 2500,
+        "articleSection": "Web Development",
+        "inLanguage": "en-US"
+      }
+    </script>
+
+    <!-- Enhanced Favicons for Better Search Results -->
+    <link rel="icon" type="image/png" href="../../../icon.png" />
+    <link rel="icon" type="image/png" href="../../../assets/img/favicon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../../../assets/img/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="../../../site.webmanifest" />
+    <meta name="theme-color" content="#0563bb" />
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -50,75 +158,24 @@
       rel="stylesheet"
     />
 
-    <!-- Main CSS File -->
+    <!-- Main CSS Files -->
     <link href="../../assets/css/main.css" rel="stylesheet" />
-    <!-- Homepage CSS for navigation -->
     <link href="../../../assets/css/style.css" rel="stylesheet" />
+    <link href="../../assets/css/blog-post.css" rel="stylesheet" />
 
-    <style>
-      /* Custom styles for code blocks */
-      .code-block {
-        background: #1e1e1e;
-        color: #d4d4d4;
-        padding: 20px;
-        border-radius: 8px;
-        margin: 20px 0;
-        overflow-x: auto;
-        font-family: "Courier New", monospace;
-        font-size: 14px;
-        line-height: 1.5;
-      }
-
-      .code-block .comment {
-        color: #6a9955;
-      }
-
-      .code-block .keyword {
-        color: #569cd6;
-      }
-
-      .code-block .string {
-        color: #ce9178;
-      }
-
-      .comparison-table {
-        margin: 30px 0;
-      }
-
-      .comparison-table th {
-        /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
-        color: rgb(87, 87, 87);
-        text-align: center;
-      }
-
-      .comparison-table td {
-        vertical-align: middle;
-        padding: 15px;
-      }
-
-      .pros {
-        color: #28a745;
-        font-weight: 500;
-      }
-
-      .cons {
-        color: #dc3545;
-        font-weight: 500;
-      }
-
-      .highlight-box {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: rgb(104, 104, 104);
-        padding: 25px;
-        border-radius: 12px;
-        margin: 30px 0;
-      }
-
-      .highlight-box h3 {
-        color: white;
-        margin-bottom: 15px;
-      }
-    </style>
+    <!-- Prism.js CSS for syntax highlighting -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body class="blog-details-page">
@@ -170,16 +227,16 @@
 
     <main class="main">
       <!-- Page Title -->
-      <div class="page-title">
+      <!-- <div class="page-title">
         <div class="title-wrapper">
-          <h1>JWT vs Sessions: Authentication Deep Dive</h1>
+          <h1>JWT vs Sessions: Which Should You Actually Use?</h1>
           <p>
-            Understanding the trade-offs between token-based and session-based
-            authentication in modern web applications through real-world
-            implementation experience.
+            A practical guide to choosing the right authentication method for
+            your project, with real examples and honest advice from someone
+            who's built apps with both.
           </p>
         </div>
-      </div>
+      </div> -->
       <!-- End Page Title -->
 
       <div class="container">
@@ -198,7 +255,7 @@
                     />
                     <div class="meta-overlay">
                       <div class="meta-categories">
-                        <a href="#" class="category">Backend Development</a>
+                        <a class="category">Backend Development</a>
                         <span class="divider">•</span>
                         <span class="reading-time"
                           ><i class="bi bi-clock"></i> 8 min read</span
@@ -238,27 +295,43 @@
                     </div>
 
                     <div class="content">
+                      <div class="highlight-box">
+                        <h3>⚡ TL;DR - Quick Decision Guide</h3>
+                        <p>
+                          <strong>Building a traditional web app?</strong> → Use
+                          Sessions<br />
+                          <strong>Building an API or React app?</strong> → Use
+                          JWT<br />
+                          <strong>Not sure?</strong> → Read the 3-question test
+                          below
+                        </p>
+                      </div>
+
                       <p class="lead">
-                        After building multiple web applications with different
-                        authentication strategies, I've learned that choosing
-                        between JWT and session-based authentication isn't just
-                        about technical preferences—it's about understanding
-                        your application's specific needs.
+                        <strong>Stop overthinking authentication.</strong> You
+                        have two solid choices: JWT or Sessions. Both work. Both
+                        are secure when done right. The difference? Sessions are
+                        like a hotel key card, JWT is like a driver's license.
+                        Let me show you which one fits your project.
                       </p>
 
                       <p>
-                        When I first started building web applications,
-                        authentication seemed straightforward. "Just use
-                        sessions," everyone said. But as I ventured into
-                        building APIs, microservices, and mobile applications, I
-                        realized that the authentication landscape is much more
-                        nuanced. Today, I'll share my hands-on experience with
-                        both approaches and help you make an informed decision.
+                        <strong>What you'll get from this guide:</strong>
                       </p>
+                      <ul>
+                        <li>
+                          A 3-question framework to choose the right method
+                        </li>
+                        <li>Real code examples (not just theory)</li>
+                        <li>
+                          Common mistakes that'll save you hours of debugging
+                        </li>
+                        <li>Security best practices that actually matter</li>
+                      </ul>
 
-                      <div class="content-image right-aligned">
+                      <!-- <div class="content-image">
                         <img
-                          src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=400&fit=crop"
+                          src="https://cdn.prod.website-files.com/61845f7929f5aa517ebab941/63a06f726c26c8dda5deba70_The%20Battle%20of%20Authentication-%20Which%20Type%20Is%20Most%20Secure.jpg"
                           class="img-fluid"
                           alt="Authentication and security concepts"
                           loading="lazy"
@@ -267,299 +340,403 @@
                           Authentication is the gateway to your application's
                           security
                         </figcaption>
-                      </div>
+                      </div> -->
 
-                      <h2>Understanding the Fundamentals</h2>
+                      <h2>Sessions = Hotel Key Card System</h2>
 
-                      <h3>Session-Based Authentication</h3>
                       <p>
-                        Session-based authentication is the traditional approach
-                        where the server creates and maintains session data for
-                        each authenticated user. Here's how it works:
+                        <strong>How it works:</strong> Server stores your data,
+                        gives you an ID to reference it.
                       </p>
 
-                      <div class="code-block">
-                        <span class="comment"
-                          >// Traditional session-based login</span
-                        >
-                        app.post(<span class="string">'/login'</span>,
-                        <span class="keyword">async</span> (req, res) => {
-                        <span class="keyword">const</span> { email, password } =
-                        req.body;
-
-                        <span class="comment"
-                          >// Validate user credentials</span
-                        >
-                        <span class="keyword">const</span> user =
-                        <span class="keyword">await</span>
-                        User.findByEmail(email);
-                        <span class="keyword">if</span> (!user || !<span
-                          class="keyword"
-                          >await</span
-                        >
-                        bcrypt.compare(password, user.hashedPassword)) {
-                        <span class="keyword">return</span>
-                        res.status(401).json({ error:
-                        <span class="string">'Invalid credentials'</span> }); }
-
-                        <span class="comment">// Create session</span>
-                        req.session.userId = user.id; req.session.role =
-                        user.role; res.json({ message:
-                        <span class="string">'Login successful'</span> }); });
+                      <div class="info-card">
+                        <h4>💡 Think of it like...</h4>
+                        <p>
+                          Checking into a hotel. You show ID at front desk →
+                          They give you room key → They keep your details on
+                          file → You show key for everything
+                        </p>
                       </div>
 
-                      <h3>JWT (JSON Web Token) Authentication</h3>
+                      <h3>Sessions Code Example</h3>
+
+                      <pre
+                        class="line-numbers"
+                      ><code class="language-javascript">// Session-based login - server remembers everything
+app.post('/login', async (req, res) => {
+  const { email, password } = req.body;
+  
+  // Check if user exists and password is correct
+  const user = await User.findByEmail(email);
+  if (!user || !await bcrypt.compare(password, user.hashedPassword)) {
+    return res.status(401).json({ error: 'Invalid credentials' });
+  }
+  
+  // Create session - server stores user info
+  req.session.userId = user.id;
+  req.session.role = user.role;
+  
+  res.json({ message: 'Login successful' });
+});</code></pre>
+
+                      <h2>JWT = VIP Pass System</h2>
+
                       <p>
-                        JWT is a stateless approach where authentication
-                        information is encoded in a token that the client stores
-                        and sends with each request:
+                        <strong>How it works:</strong> All your info is encoded
+                        in the token itself. No server storage needed.
                       </p>
 
-                      <div class="code-block">
-                        <span class="comment">// JWT-based login</span>
-                        app.post(<span class="string">'/login'</span>,
-                        <span class="keyword">async</span> (req, res) => {
-                        <span class="keyword">const</span> { email, password } =
-                        req.body;
-
-                        <span class="comment"
-                          >// Validate user credentials</span
-                        >
-                        <span class="keyword">const</span> user =
-                        <span class="keyword">await</span>
-                        User.findByEmail(email);
-                        <span class="keyword">if</span> (!user || !<span
-                          class="keyword"
-                          >await</span
-                        >
-                        bcrypt.compare(password, user.hashedPassword)) {
-                        <span class="keyword">return</span>
-                        res.status(401).json({ error:
-                        <span class="string">'Invalid credentials'</span> }); }
-
-                        <span class="comment">// Create JWT</span>
-                        <span class="keyword">const</span> token = jwt.sign( {
-                        userId: user.id, role: user.role },
-                        process.env.JWT_SECRET, { expiresIn:
-                        <span class="string">'24h'</span> } ); res.json({ token,
-                        user: { id: user.id, email: user.email } }); });
+                      <div class="info-card">
+                        <h4>💡 Think of it like...</h4>
+                        <p>
+                          A VIP concert pass. All your access info is printed on
+                          the pass → Security scans it → No need to check a
+                          database
+                        </p>
                       </div>
+
+                      <h3>JWT Code Example</h3>
+
+                      <pre
+                        class="line-numbers"
+                      ><code class="language-javascript">// JWT-based login - client stores everything
+app.post('/login', async (req, res) => {
+  const { email, password } = req.body;
+  
+  // Same validation as before
+  const user = await User.findByEmail(email);
+  if (!user || !await bcrypt.compare(password, user.hashedPassword)) {
+    return res.status(401).json({ error: 'Invalid credentials' });
+  }
+  
+  // Create JWT token with user info inside
+  const token = jwt.sign(
+    { 
+      userId: user.id, 
+      role: user.role,
+      // Role could be 'admin', 'user', 'moderator', etc.
+    },
+    process.env.JWT_SECRET,
+    { expiresIn: '24h' }
+  );
+  
+  res.json({ 
+    token, 
+    user: { id: user.id, email: user.email } 
+  });
+});</code></pre>
 
                       <div class="highlight-box">
                         <h3>Key Difference</h3>
                         <p>
-                          <strong>Sessions:</strong> Server stores user state,
-                          client gets a session ID cookie<br />
-                          <strong>JWT:</strong> Client stores user state in a
-                          token, server verifies token signature
+                          <strong>Sessions:</strong> "Here's your room number
+                          (123), we'll keep your details at the front desk"<br />
+                          <strong>JWT:</strong> "Here's your driver's license
+                          with all your info on it"
                         </p>
                       </div>
 
-                      <h2>Detailed Comparison</h2>
+                      <h2>Sessions vs JWT: Quick Comparison</h2>
 
-                      <div class="comparison-table">
-                        <table class="table table-bordered">
-                          <thead>
-                            <tr>
-                              <th>Aspect</th>
-                              <th>Sessions</th>
-                              <th>JWT</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td><strong>Storage Location</strong></td>
-                              <td>Server-side (memory, database, Redis)</td>
-                              <td>Client-side (localStorage, cookies)</td>
-                            </tr>
-                            <tr>
-                              <td><strong>Scalability</strong></td>
-                              <td class="cons">
-                                Requires shared storage or sticky sessions
-                              </td>
-                              <td class="pros">Stateless, easily scalable</td>
-                            </tr>
-                            <tr>
-                              <td><strong>Security</strong></td>
-                              <td class="pros">
-                                Server controls all session data
-                              </td>
-                              <td class="cons">
-                                Vulnerable to XSS if stored in localStorage
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><strong>Performance</strong></td>
-                              <td class="cons">
-                                Database/Redis lookup per request
-                              </td>
-                              <td class="pros">No server-side lookup needed</td>
-                            </tr>
-                            <tr>
-                              <td><strong>Logout/Revocation</strong></td>
-                              <td class="pros">
-                                Immediate session termination
-                              </td>
-                              <td class="cons">Token valid until expiration</td>
-                            </tr>
-                            <tr>
-                              <td><strong>Mobile Apps</strong></td>
-                              <td class="cons">Cookie handling complexities</td>
-                              <td class="pros">Easy to implement</td>
-                            </tr>
-                            <tr>
-                              <td><strong>Microservices</strong></td>
-                              <td class="cons">
-                                Shared session store required
-                              </td>
-                              <td class="pros">
-                                Self-contained, service-independent
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                      <div class="content-grid">
+                        <div class="row g-4">
+                          <div class="col-md-6">
+                            <div class="info-card">
+                              <h4>Sessions Win When...</h4>
+                              <ul>
+                                <li>
+                                  <strong>Security first</strong> - Banking,
+                                  medical apps
+                                </li>
+                                <li>
+                                  <strong>Instant logout needed</strong> - Admin
+                                  panels
+                                </li>
+                                <li>
+                                  <strong>Traditional web app</strong> - Forms,
+                                  server pages
+                                </li>
+                                <li>
+                                  <strong>Small scale</strong> - Under 1K users
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="info-card">
+                              <h4>JWT Wins When...</h4>
+                              <ul>
+                                <li>
+                                  <strong>APIs & SPAs</strong> - React, Vue,
+                                  Angular
+                                </li>
+                                <li>
+                                  <strong>Mobile apps</strong> - Native
+                                  iOS/Android
+                                </li>
+                                <li>
+                                  <strong>Microservices</strong> - Multiple
+                                  backends
+                                </li>
+                                <li>
+                                  <strong>Need to scale</strong> - 1K+
+                                  concurrent users
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
                       </div>
 
-                      <h2>Real-World Implementation Experience</h2>
+                      <div class="table-responsive">
+                        <div class="comparison-table">
+                          <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th>Aspect</th>
+                                <th>Sessions</th>
+                                <th>JWT</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><strong>Storage Location</strong></td>
+                                <td>Server-side (memory, database, Redis)</td>
+                                <td>Client-side (localStorage, cookies)</td>
+                              </tr>
+                              <tr>
+                                <td><strong>Scalability</strong></td>
+                                <td class="cons">
+                                  Requires shared storage or sticky sessions
+                                </td>
+                                <td class="pros">Stateless, easily scalable</td>
+                              </tr>
+                              <tr>
+                                <td><strong>Security</strong></td>
+                                <td class="pros">
+                                  Server controls all session data
+                                </td>
+                                <td class="cons">
+                                  Vulnerable to XSS if stored in localStorage
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><strong>Performance</strong></td>
+                                <td class="cons">
+                                  Database/Redis lookup per request
+                                </td>
+                                <td class="pros">
+                                  No server-side lookup needed
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><strong>Logout/Revocation</strong></td>
+                                <td class="pros">
+                                  Immediate session termination
+                                </td>
+                                <td class="cons">
+                                  Token valid until expiration
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><strong>Mobile Apps</strong></td>
+                                <td class="cons">
+                                  Cookie handling complexities
+                                </td>
+                                <td class="pros">Easy to implement</td>
+                              </tr>
+                              <tr>
+                                <td><strong>Microservices</strong></td>
+                                <td class="cons">
+                                  Shared session store required
+                                </td>
+                                <td class="pros">
+                                  Self-contained, service-independent
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
 
-                      <h3>When I Choose Sessions</h3>
+                      <h2>Real Scenarios: When to Use What</h2>
+
+                      <h3>I Reach for Sessions When...</h3>
                       <p>
-                        I prefer session-based authentication for traditional
-                        web applications where:
+                        Sessions work great for traditional web applications.
+                        Here's when I choose them:
                       </p>
                       <ul>
                         <li>
-                          The application is primarily server-rendered (SSR)
-                        </li>
-                        <li>I need immediate logout functionality</li>
-                        <li>
-                          Security is paramount and I want server-side control
+                          <strong>Building a classic web app</strong> - Forms,
+                          server-rendered pages, the usual stuff
                         </li>
                         <li>
-                          The application won't need to scale beyond a few
-                          servers
+                          <strong>Security is critical</strong> - Banking apps,
+                          admin panels where instant logout matters
+                        </li>
+                        <li>
+                          <strong>Simple architecture</strong> - One server,
+                          straightforward setup
+                        </li>
+                        <li>
+                          <strong>You want full control</strong> - Need to track
+                          active users, manage permissions dynamically
                         </li>
                       </ul>
 
-                      <div class="code-block">
-                        <span class="comment"
-                          >// Session middleware setup with Redis</span
-                        >
-                        app.use(session({ store:
-                        <span class="keyword">new</span> RedisStore({ client:
-                        redisClient }), secret: process.env.SESSION_SECRET,
-                        resave: <span class="keyword">false</span>,
-                        saveUninitialized: <span class="keyword">false</span>,
-                        cookie: { secure: process.env.NODE_ENV ===
-                        <span class="string">'production'</span>, httpOnly:
-                        <span class="keyword">true</span>, maxAge: 24 * 60 * 60
-                        * 1000 <span class="comment">// 24 hours</span>
-                        } }));
-                      </div>
+                      <p>
+                        <strong>Pro tip:</strong> If you're building something
+                        like a content management system or e-commerce admin
+                        panel, sessions are usually the way to go.
+                      </p>
 
-                      <h3>When I Choose JWT</h3>
-                      <p>JWT becomes my go-to choice for:</p>
+                      <pre
+                        class="line-numbers"
+                      ><code class="language-javascript">// Basic session setup - works great for most web apps
+app.use(session({
+  store: new RedisStore({ client: redisClient }),
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    secure: process.env.NODE_ENV === 'production',
+    httpOnly: true,
+    maxAge: 8 * 60 * 60 * 1000 // 8 hours - reasonable for most apps
+  }
+}));</code></pre>
+
+                      <h3>I Go with JWT When...</h3>
+                      <p>JWT shines in these scenarios:</p>
                       <ul>
-                        <li>API-first applications</li>
-                        <li>Mobile app backends</li>
-                        <li>Microservices architectures</li>
-                        <li>Applications that need to scale horizontally</li>
+                        <li>
+                          <strong>Building an API</strong> - REST APIs, GraphQL
+                          endpoints, anything mobile apps will consume
+                        </li>
+                        <li>
+                          <strong>React/Vue/Angular apps</strong> - SPAs that
+                          need to manage auth state on the frontend
+                        </li>
+                        <li>
+                          <strong>Multiple services</strong> - Microservices
+                          that all need to verify the same users
+                        </li>
+                        <li>
+                          <strong>Need to scale</strong> - When you expect lots
+                          of concurrent users
+                        </li>
                       </ul>
 
-                      <div class="code-block">
-                        <span class="comment"
-                          >// JWT middleware for protected routes</span
-                        >
-                        <span class="keyword">const</span> authenticateToken =
-                        (req, res, next) => {
-                        <span class="keyword">const</span> authHeader =
-                        req.headers[<span class="string">'authorization'</span
-                        >]; <span class="keyword">const</span> token =
-                        authHeader && authHeader.split(<span class="string"
-                          >' '</span
-                        >)[1];
+                      <p>
+                        <strong>Real example:</strong> For my claim management
+                        app, JWT was perfect because I had patients and insurers
+                        using different interfaces, but the same backend API
+                        needed to handle both roles seamlessly.
+                      </p>
 
-                        <span class="keyword">if</span> (!token) {
-                        <span class="keyword">return</span>
-                        res.status(401).json({ error:
-                        <span class="string">'Access token required'</span> });
-                        } jwt.verify(token, process.env.JWT_SECRET, (err, user)
-                        => { <span class="keyword">if</span> (err) {
-                        <span class="keyword">return</span>
-                        res.status(403).json({ error:
-                        <span class="string">'Invalid token'</span> }); }
-                        req.user = user; next(); }); };
-                      </div>
+                      <pre
+                        class="line-numbers"
+                      ><code class="language-javascript">// JWT middleware - clean and stateless
+const authenticateToken = (req, res, next) => {
+  const authHeader = req.headers['authorization'];
+  const token = authHeader && authHeader.split(' ')[1];
+
+  if (!token) {
+    return res.status(401).json({ error: 'Access token required' });
+  }
+
+  jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
+    if (err) {
+      return res.status(403).json({ error: 'Invalid or expired token' });
+    }
+    req.user = user; // Now you have access to user info in all routes
+    next();
+  });
+};</code></pre>
 
                       <blockquote>
                         <p>
-                          "The choice between JWT and sessions isn't about which
-                          is 'better'—it's about which fits your architecture
-                          and requirements. I've seen perfectly secure and
-                          performant applications using both approaches."
+                          "Here's the truth: both approaches work well when
+                          implemented correctly. The 'best' choice depends
+                          entirely on what you're building and how it needs to
+                          work."
                         </p>
-                        <cite
-                          >My experience after building 15+ production
-                          applications</cite
-                        >
                       </blockquote>
 
-                      <h2>Hybrid Approaches and Best Practices</h2>
+                      <h2>The Modern Approach: Best of Both Worlds</h2>
 
                       <p>
-                        In some of my recent projects, I've implemented hybrid
-                        approaches that combine the benefits of both:
+                        Here's a pattern I've started using more often - refresh
+                        tokens. It's like having both a temporary pass and a
+                        permanent ID:
                       </p>
 
                       <h3>Refresh Token Strategy</h3>
-                      <div class="code-block">
-                        <span class="comment"
-                          >// Implementing refresh tokens with JWT</span
-                        >
-                        app.post(<span class="string">'/login'</span>,
-                        <span class="keyword">async</span> (req, res) => {
-                        <span class="comment"
-                          >// ... validate credentials ...</span
-                        >
+                      <pre
+                        class="line-numbers"
+                      ><code class="language-javascript">// Modern approach: short-lived access token + long-lived refresh token
+app.post('/login', async (req, res) => {
+  // ... validate credentials ...
+  
+  // Short-lived access token (15 minutes)
+  const accessToken = jwt.sign(
+    { userId: user.id, role: user.role },
+    process.env.JWT_SECRET,
+    { expiresIn: '15m' }
+  );
+  
+  // Long-lived refresh token (7 days)
+  const refreshToken = jwt.sign(
+    { userId: user.id },
+    process.env.REFRESH_SECRET,
+    { expiresIn: '7d' }
+  );
+  
+  // Store refresh token so we can revoke it if needed
+  await RefreshToken.create({ 
+    token: refreshToken, 
+    userId: user.id 
+  });
+  
+  res.json({ accessToken, refreshToken });
+});</code></pre>
 
-                        <span class="keyword">const</span> accessToken =
-                        jwt.sign( { userId: user.id, role: user.role },
-                        process.env.JWT_SECRET, { expiresIn:
-                        <span class="string">'15m'</span> }
-                        <span class="comment">// Short-lived</span>
-                        );
+                      <p>
+                        <strong>Why this works:</strong> Users stay logged in
+                        for a week (good UX), but if someone steals their access
+                        token, it only works for 15 minutes (good security).
+                      </p>
 
-                        <span class="keyword">const</span> refreshToken =
-                        jwt.sign( { userId: user.id },
-                        process.env.REFRESH_SECRET, { expiresIn:
-                        <span class="string">'7d'</span> }
-                        <span class="comment">// Long-lived</span>
-                        );
-
-                        <span class="comment"
-                          >// Store refresh token in database for
-                          revocation</span
-                        >
-                        <span class="keyword">await</span> RefreshToken.create({
-                        token: refreshToken, userId: user.id }); res.json({
-                        accessToken, refreshToken }); });
-                      </div>
+                      <h2>Common Mistakes (So You Don't Make Them)</h2>
 
                       <div class="content-grid">
                         <div class="row g-4">
                           <div class="col-md-6">
                             <div class="info-card">
                               <i class="bi bi-shield-check"></i>
-                              <h4>Security Best Practices</h4>
+                              <h4>Security Gotchas I've Learned</h4>
                               <ul>
-                                <li>Use HTTPS in production</li>
-                                <li>Implement proper CORS policies</li>
                                 <li>
-                                  Store JWT in httpOnly cookies when possible
+                                  <strong
+                                    >Don't store JWT in localStorage</strong
+                                  >
+                                  - Use httpOnly cookies when possible
                                 </li>
                                 <li>
-                                  Implement token blacklisting for sensitive
-                                  apps
+                                  <strong
+                                    >Always use HTTPS in production</strong
+                                  >
+                                  - No exceptions
+                                </li>
+                                <li>
+                                  <strong>Keep JWT payloads small</strong> -
+                                  Only essential info
+                                </li>
+                                <li>
+                                  <strong
+                                    >Set reasonable expiration times</strong
+                                  >
+                                  - Balance security and UX
                                 </li>
                               </ul>
                             </div>
@@ -567,13 +744,20 @@
                           <div class="col-md-6">
                             <div class="info-card">
                               <i class="bi bi-speedometer2"></i>
-                              <h4>Performance Tips</h4>
+                              <h4>Performance Lessons</h4>
                               <ul>
                                 <li>
-                                  Use Redis for session storage in production
+                                  <strong>Use Redis for sessions</strong> -
+                                  In-memory is much faster than database
                                 </li>
-                                <li>Keep JWT payloads small</li>
-                                <li>Implement proper caching strategies</li>
+                                <li>
+                                  <strong>Index your user lookup fields</strong>
+                                  - Speed up authentication queries
+                                </li>
+                                <li>
+                                  <strong>Consider connection pooling</strong> -
+                                  Reuse database connections
+                                </li>
                                 <li>Consider token refresh mechanisms</li>
                               </ul>
                             </div>
@@ -581,77 +765,59 @@
                         </div>
                       </div>
 
-                      <h2>My Recommendations</h2>
-
-                      <p>
-                        Based on my experience building various types of
-                        applications, here's my decision framework:
-                      </p>
+                      <h2>Quick Decision Framework</h2>
 
                       <div class="highlight-box">
-                        <h3>Choose Sessions When:</h3>
-                        <ul class="trend-list">
-                          <li>
-                            <i class="bi bi-check-circle"></i> Building a
-                            traditional web app with server-side rendering
-                          </li>
-                          <li>
-                            <i class="bi bi-check-circle"></i> Security
-                            requirements are extremely high
-                          </li>
-                          <li>
-                            <i class="bi bi-check-circle"></i> You need
-                            immediate logout/session termination
-                          </li>
-                          <li>
-                            <i class="bi bi-check-circle"></i> The application
-                            won't need massive horizontal scaling
-                          </li>
-                        </ul>
+                        <h3>Answer These 3 Questions:</h3>
 
-                        <h3>Choose JWT When:</h3>
-                        <ul class="trend-list">
-                          <li>
-                            <i class="bi bi-check-circle"></i> Building APIs or
-                            SPA applications
-                          </li>
-                          <li>
-                            <i class="bi bi-check-circle"></i> You need to
-                            support mobile applications
-                          </li>
-                          <li>
-                            <i class="bi bi-check-circle"></i> Planning for
-                            microservices architecture
-                          </li>
-                          <li>
-                            <i class="bi bi-check-circle"></i> Horizontal
-                            scaling is a priority
-                          </li>
-                        </ul>
+                        <div class="content-grid">
+                          <div class="row g-3">
+                            <div class="col-md-4">
+                              <div class="info-card">
+                                <h4>1. What are you building?</h4>
+                                <p>
+                                  <strong>Traditional web app?</strong><br />→
+                                  Use Sessions
+                                </p>
+                                <p>
+                                  <strong>API or React app?</strong><br />→ Use
+                                  JWT
+                                </p>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="info-card">
+                                <h4>2. How many users?</h4>
+                                <p>
+                                  <strong>Under 1K users?</strong><br />→ Either
+                                  works
+                                </p>
+                                <p>
+                                  <strong>1K+ users?</strong><br />→ JWT scales
+                                  easier
+                                </p>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="info-card">
+                                <h4>3. How sensitive?</h4>
+                                <p>
+                                  <strong>Banking/Medical?</strong><br />→
+                                  Sessions safer
+                                </p>
+                                <p>
+                                  <strong>Standard app?</strong><br />→ JWT is
+                                  fine
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-
-                      <h2>Conclusion</h2>
                       <p>
-                        After implementing both authentication strategies across
-                        different types of applications, I've learned that
-                        there's no one-size-fits-all solution. The key is
-                        understanding your specific requirements: security
-                        needs, scalability requirements, application
-                        architecture, and team expertise.
-                      </p>
-
-                      <p>
-                        For my current projects, I often start with the simpler
-                        approach (usually sessions for web apps, JWT for APIs)
-                        and evolve the authentication strategy as the
-                        application grows. Remember, you can always migrate from
-                        one approach to another as your needs change.
-                      </p>
-
-                      <p>
-                        The most important thing is to implement whichever
-                        approach you choose securely and thoroughly understand
-                        its implications for your specific use case.
+                        <strong>My advice:</strong> Start simple, ship fast, and
+                        iterate based on real user feedback. That's how you
+                        build things people actually want to use.
                       </p>
                     </div>
 
@@ -671,16 +837,35 @@
                       <div class="share-section">
                         <h4>Share Article</h4>
                         <div class="social-links">
-                          <a href="#" class="twitter"
+                          <a
+                            href="https://twitter.com/intent/tweet?url=https://www.kripanshu.me/blog/posts/jwt-vs-sessions/&text=JWT%20vs%20Sessions:%20Complete%20Authentication%20Guide%202025%20by%20@kripanshu_singh&hashtags=JWT,Sessions,Authentication,WebDev"
+                            class="twitter"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Share on Twitter"
                             ><i class="bi bi-twitter-x"></i
                           ></a>
-                          <a href="#" class="facebook"
+                          <a
+                            href="https://www.facebook.com/sharer/sharer.php?u=https://www.kripanshu.me/blog/posts/jwt-vs-sessions/"
+                            class="facebook"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Share on Facebook"
                             ><i class="bi bi-facebook"></i
                           ></a>
-                          <a href="#" class="linkedin"
+                          <a
+                            href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.kripanshu.me/blog/posts/jwt-vs-sessions/"
+                            class="linkedin"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Share on LinkedIn"
                             ><i class="bi bi-linkedin"></i
                           ></a>
-                          <a href="#" class="copy-link" title="Copy Link"
+                          <a
+                            href="#"
+                            class="copy-link"
+                            title="Copy Link"
+                            onclick="copyToClipboard('https://www.kripanshu.me/blog/posts/jwt-vs-sessions/'); return false;"
                             ><i class="bi bi-link-45deg"></i
                           ></a>
                         </div>
@@ -699,7 +884,7 @@
                   <div class="row align-items-center">
                     <div class="col-lg-3 col-md-4 text-center">
                       <img
-                        src="../../../assets/img/profile-img4.jpg"
+                        src="../../../assets/img/img.png"
                         class="author-img rounded-circle"
                         alt="Kripanshu Singh"
                         loading="lazy"
@@ -731,29 +916,26 @@
                       <div class="author-content">
                         <h3 class="author-name">Kripanshu Singh</h3>
                         <span class="author-title"
-                          >Full Stack Developer &amp; Software Engineer</span
+                          >Software Engineer &amp; Full Stack Developer</span
                         >
 
                         <div class="author-bio mt-3">
-                          Passionate full-stack developer with expertise in
-                          modern web technologies. I love building scalable
-                          applications and sharing my learning experiences with
-                          the developer community. Currently working with React,
-                          Node.js, and cloud technologies.
-                        </div>
+                          <p>
+                            Software Engineer with expertise in backend APIs,
+                            authentication systems, and full-stack development.
+                            Previously contributed to India's national health
+                            registries at
+                            <strong>Aarogya ID</strong>, where I built scalable
+                            applications processing millions of requests and
+                            improved API response times by 40%.
+                          </p>
 
-                        <div class="author-website mt-3">
-                          <a
-                            href="https://www.kripanshu.me/"
-                            class="website-link"
-                          >
-                            <i class="bi bi-globe"></i>
-                            <span>kripanshu.me</span>
-                          </a>
-                          <a href="../../index.html" class="more-posts">
-                            Read More Articles
-                            <i class="bi bi-arrow-right"></i>
-                          </a>
+                          <p>
+                            Currently seeking new opportunities while sharing
+                            practical insights from real-world development
+                            experience to help fellow developers make better
+                            technical decisions.
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -788,5 +970,143 @@
 
     <!-- Main JS File -->
     <script src="../../../assets/js/main.js"></script>
+
+    <!-- Prism.js for syntax highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+
+    <!-- Enhanced Copy Button Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Apply line-numbers class to all code blocks
+        document.querySelectorAll("pre code").forEach(function (el) {
+          el.classList.add("line-numbers");
+        });
+
+        // Initialize Prism highlighting
+        Prism.highlightAll();
+
+        // Enhanced copy button functionality
+        setTimeout(function () {
+          // Add enhanced styling and behavior to copy buttons
+          document
+            .querySelectorAll(".code-toolbar .toolbar button")
+            .forEach((button) => {
+              // Set initial text
+              if (!button.textContent.trim()) {
+                button.textContent = "Copy";
+              }
+
+              // Enhanced copy success feedback
+              button.addEventListener("click", function () {
+                const originalText = this.textContent;
+                this.classList.add("copy-success");
+                this.textContent = "Copied!";
+
+                // Reset after 2 seconds
+                setTimeout(() => {
+                  this.classList.remove("copy-success");
+                  this.textContent = originalText;
+                }, 2000);
+              });
+
+              // Add hover effects
+              button.addEventListener("mouseenter", function () {
+                if (!this.classList.contains("copy-success")) {
+                  this.style.transform = "translateY(-1px)";
+                }
+              });
+
+              button.addEventListener("mouseleave", function () {
+                if (!this.classList.contains("copy-success")) {
+                  this.style.transform = "translateY(0)";
+                }
+              });
+            });
+
+          // Add keyboard shortcut for copying (Ctrl+C when code block is focused)
+          document
+            .querySelectorAll('pre[class*="language-"]')
+            .forEach((pre) => {
+              pre.setAttribute("tabindex", "0");
+
+              pre.addEventListener("keydown", function (e) {
+                if ((e.ctrlKey || e.metaKey) && e.key === "c") {
+                  e.preventDefault();
+                  const code = this.querySelector("code");
+                  if (code) {
+                    const text = code.textContent;
+                    navigator.clipboard.writeText(text).then(() => {
+                      // Show toast notification
+                      showCopyNotification("Code copied to clipboard!");
+                    });
+                  }
+                }
+              });
+            });
+        }, 100);
+
+        // Toast notification function
+        function showCopyNotification(message) {
+          const toast = document.createElement("div");
+          toast.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(76, 175, 80, 0.95);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            z-index: 10000;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          `;
+          toast.textContent = message;
+          document.body.appendChild(toast);
+
+          // Animate in
+          setTimeout(() => {
+            toast.style.transform = "translateX(0)";
+          }, 10);
+
+          // Animate out and remove
+          setTimeout(() => {
+            toast.style.transform = "translateX(100%)";
+            setTimeout(() => {
+              document.body.removeChild(toast);
+            }, 300);
+          }, 2000);
+        }
+      });
+
+      // Copy to clipboard function for share links
+      function copyToClipboard(text) {
+        navigator.clipboard
+          .writeText(text)
+          .then(() => {
+            showCopyNotification("Link copied to clipboard!");
+          })
+          .catch((err) => {
+            // Fallback for older browsers
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.position = "fixed";
+            textArea.style.left = "-999999px";
+            textArea.style.top = "-999999px";
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            document.execCommand("copy");
+            textArea.remove();
+            showCopyNotification("Link copied to clipboard!");
+          });
+      }
+    </script>
   </body>
 </html>
