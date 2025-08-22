@@ -311,14 +311,47 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Hero Section
+# Hero Section - Optimized for LCP Performance
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
   height: 100vh;
-  /* background: url("../img/hero-bg768.jpg") top right no-repeat; */
-  background-size: cover;
   position: relative;
+  /* Default fallback background for very small screens */
+  background: url("../img/smallPhones.png") top right no-repeat;
+  background-size: cover;
+}
+
+/* Mobile Portrait (up to 576px) */
+@media (max-width: 576px) {
+  #hero {
+    background: url("../img/smallPhones.png") top right no-repeat;
+    background-size: cover;
+  }
+}
+
+/* Mobile Landscape / Small Tablets (577px to 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  #hero {
+    background: url("../img/large-phone.png") top right no-repeat;
+    background-size: cover;
+  }
+}
+
+/* Tablets (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  #hero {
+    background: url("../img/tablet.png") top right no-repeat;
+    background-size: cover;
+  }
+}
+
+/* Desktop and Laptop (1025px and up) */
+@media (min-width: 1025px) {
+  #hero {
+    background: url("../img/mainlaptop.png") top right no-repeat;
+    background-size: cover;
+  }
 }
 
 @media (min-width: 992px) {
