@@ -54,8 +54,20 @@
   ],
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "source": "/blog",
+      "destination": "/blog/index.html"
+    },
+    {
+      "source": "/blog/",
+      "destination": "/blog/index.html"
+    },
+    {
+      "source": "/blog/posts/jwt-vs-sessions",
+      "destination": "/blog/posts/jwt-vs-sessions/index.html"
+    },
+    {
+      "source": "/blog/posts/jwt-vs-sessions/",
+      "destination": "/blog/posts/jwt-vs-sessions/index.html"
     }
   ]
 }
