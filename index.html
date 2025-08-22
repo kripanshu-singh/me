@@ -193,6 +193,30 @@
         z-index: 2;
       }
 
+      #hero p span {
+        color: #ff9e00;
+        text-shadow: 1px 1px 15px #fcb035;
+        letter-spacing: 1px;
+      }
+
+      /* Typewriter effect styling */
+      .typed-cursor {
+        color: #ff9e00;
+        font-weight: 100;
+        animation: blink 1s infinite;
+      }
+
+      @keyframes blink {
+        0%,
+        50% {
+          opacity: 1;
+        }
+        51%,
+        100% {
+          opacity: 0;
+        }
+      }
+
       @media (max-width: 992px) {
         #hero {
           text-align: center;
@@ -387,13 +411,13 @@
     </header>
 
     <!-- ======= Hero Section ======= -->
-    <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex flex-column justify-content-center">
       <div class="container" data-aos="zoom-in" data-aos-delay="100">
         <h1>Kripanshu Singh</h1>
         <p>
           I'm a
           <span
+            class="typed"
             data-typed-items="Software Engineer, Full-Stack Developer, Problem Solver, Lifelong Learner"
           ></span>
         </p>
@@ -1289,12 +1313,30 @@
         });
       }
 
+      // Debug: Check if typewriter element is found
+      document.addEventListener("DOMContentLoaded", function () {
+        const typedElement = document.querySelector(".typed");
+        if (typedElement) {
+          console.log("✅ Typed element found:", typedElement);
+          console.log(
+            "📝 Data typed items:",
+            typedElement.getAttribute("data-typed-items"),
+          );
+        } else {
+          console.error("❌ Typed element not found");
+        }
+      });
+
       // Responsive contact icons - keep this as it's layout-related
       if (screen.width < 992) {
-        document.getElementById("itag1").style.cssText = "margin-left: 0px ;";
-        document.getElementById("itag2").style.cssText = "margin-left: 0px ;";
-        document.getElementById("itag3").style.cssText = "margin-left: 0px ;";
-        document.getElementById("itag4").style.cssText = "margin-left: 0px ;";
+        const itag1 = document.getElementById("itag1");
+        const itag2 = document.getElementById("itag2");
+        const itag3 = document.getElementById("itag3");
+        const itag4 = document.getElementById("itag4");
+        if (itag1) itag1.style.cssText = "margin-left: 0px ;";
+        if (itag2) itag2.style.cssText = "margin-left: 0px ;";
+        if (itag3) itag3.style.cssText = "margin-left: 0px ;";
+        if (itag4) itag4.style.cssText = "margin-left: 0px ;";
       }
       if (screen.width < 768) {
         var dfg1 = screen.width - 390;
@@ -1303,20 +1345,16 @@
         }
         dfg1 = dfg1 * 0.2122;
         var dfg2 = 45 + Math.round(dfg1);
-        document.getElementById(
-          "itag1",
-        ).style.cssText = `margin-left: ${dfg2}px ;`;
-        document.getElementById(
-          "itag2",
-        ).style.cssText = `margin-left: ${dfg2}px ;`;
-        document.getElementById(
-          "itag3",
-        ).style.cssText = `margin-left: ${dfg2}px ;`;
-        document.getElementById(
-          "itag4",
-        ).style.cssText = `margin-left: ${dfg2}px ;`;
+        const itag1 = document.getElementById("itag1");
+        const itag2 = document.getElementById("itag2");
+        const itag3 = document.getElementById("itag3");
+        const itag4 = document.getElementById("itag4");
+        if (itag1) itag1.style.cssText = `margin-left: ${dfg2}px ;`;
+        if (itag2) itag2.style.cssText = `margin-left: ${dfg2}px ;`;
+        if (itag3) itag3.style.cssText = `margin-left: ${dfg2}px ;`;
+        if (itag4) itag4.style.cssText = `margin-left: ${dfg2}px ;`;
         var element = document.getElementById("col2");
-        element.classList.add("mt-5");
+        if (element) element.classList.add("mt-5");
       }
 
       // SEO - Update page title dynamically based on section
