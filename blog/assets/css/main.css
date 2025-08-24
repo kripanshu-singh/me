@@ -2010,6 +2010,7 @@ section,
 .blog-details .article-content .content ul li {
   margin-bottom: 0.75rem;
   position: relative;
+  /* color: var(--nav-dropdown-background-color); */
 }
 
 .blog-details .article-content .content .content-image {

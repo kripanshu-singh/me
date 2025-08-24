@@ -7,6 +7,9 @@ Disallow: /assets/js/
 Disallow: /blog/assets/vendor/
 Disallow: /blog/assets/js/
 Disallow: /*.json
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.vscode/
 
 # Allow important content directories
 Allow: /assets/img/
@@ -15,6 +18,7 @@ Allow: /assets/documents/
 Allow: /blog/
 Allow: /blog/posts/
 Allow: /blog/assets/img/
+Allow: /blog/posts/*/assets/
 
 # Sitemap location
 Sitemap: https://www.kripanshu.me/sitemap.xml
@@ -22,13 +26,20 @@ Sitemap: https://www.kripanshu.me/sitemap.xml
 # Additional instructions for major search engines
 User-agent: Googlebot
 Allow: /
-# Higher crawl priority for blog content
-Allow: /blog/
+# Higher crawl priority for fresh blog content
+Allow: /blog/posts/my-first-oauth-integration/
+Allow: /blog/posts/jwt-vs-sessions/
 
 User-agent: Bingbot
 Allow: /
 
 User-agent: LinkedInBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
 Allow: /
 
 # Faster crawling for fresh blog content
@@ -37,3 +48,13 @@ Crawl-delay: 1
 
 # Standard crawl delay for other bots
 Crawl-delay: 2
+
+# Block common bot attacks
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /

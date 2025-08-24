@@ -8,9 +8,27 @@
     <language>en-US</language>
     <managingEditor>kripanshusingh160305@gmail.com (Kripanshu Singh)</managingEditor>
     <webMaster>kripanshusingh160305@gmail.com (Kripanshu Singh)</webMaster>
-    <lastBuildDate>Thu, 22 Aug 2025 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 24 Aug 2025 00:00:00 GMT</lastBuildDate>
     <category>Software Development</category>
+    <category>Authentication</category>
+    <category>API Security</category>
     <ttl>60</ttl>
+    
+    <!-- Latest Post: OAuth 2.0 Integration Guide -->
+    <item>
+      <title><![CDATA[My First OAuth 2.0 Integration: From Zero to Production]]></title>
+      <description><![CDATA[Complete guide comparing OAuth 2.0 vs JWT vs Sessions vs API Keys vs Basic Auth vs SAML. Learn Authorization vs Authentication differences, detailed comparison tables with implementation times, security levels, and real-world production experience from $1M+ ad spend system.]]></description>
+      <link>https://www.kripanshu.me/blog/posts/my-first-oauth-integration/</link>
+      <guid isPermaLink="true">https://www.kripanshu.me/blog/posts/my-first-oauth-integration/</guid>
+      <pubDate>Fri, 23 Aug 2025 00:00:00 GMT</pubDate>
+      <category><![CDATA[OAuth 2.0]]></category>
+      <category><![CDATA[Authentication]]></category>
+      <category><![CDATA[API Security]]></category>
+      <category><![CDATA[Backend Development]]></category>
+      <category><![CDATA[Authorization]]></category>
+      <author>kripanshusingh160305@gmail.com (Kripanshu Singh)</author>
+      <enclosure url="https://www.kripanshu.me/blog/posts/my-first-oauth-integration/assets/my_first_oauth.png" length="0" type="image/png"/>
+    </item>
     
     <item>
       <title><![CDATA[JWT vs Sessions: Complete Authentication Guide 2025]]></title>
@@ -22,6 +40,7 @@
       <category><![CDATA[Authentication]]></category>
       <category><![CDATA[Backend Development]]></category>
       <author>kripanshusingh160305@gmail.com (Kripanshu Singh)</author>
+      <enclosure url="https://www.kripanshu.me/blog/posts/jwt-vs-sessions/assets/jwt_vs_session.png" length="0" type="image/png"/>
     </item>
     
   </channel>

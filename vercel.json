@@ -86,6 +86,14 @@
     {
       "source": "/blog/posts/jwt-vs-sessions/",
       "destination": "/blog/posts/jwt-vs-sessions/index.html"
+    },
+    {
+      "source": "/blog/posts/my-first-oauth-integration",
+      "destination": "/blog/posts/my-first-oauth-integration/index.html"
+    },
+    {
+      "source": "/blog/posts/my-first-oauth-integration/",
+      "destination": "/blog/posts/my-first-oauth-integration/index.html"
     }
   ]
 }

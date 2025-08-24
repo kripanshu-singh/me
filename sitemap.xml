@@ -71,6 +71,18 @@
     </image:image>
   </url>
   
+  <url>
+    <loc>https://www.kripanshu.me/blog/posts/my-first-oauth-integration/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.kripanshu.me/blog/posts/my-first-oauth-integration/assets/my_first_oauth.png</image:loc>
+      <image:title>My First OAuth 2.0 Integration: From Zero to Production</image:title>
+      <image:caption>Complete OAuth 2.0 implementation guide with Authorization vs Authentication concepts, detailed comparison tables, and real-world implementation experience from Messold Technologies</image:caption>
+    </image:image>
+  </url>
+  
   <!-- Resume PDF -->
   <url>
     <loc>https://www.kripanshu.me/assets/documents/Kripanshu_Singh_Resume.pdf</loc>

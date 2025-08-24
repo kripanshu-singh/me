@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <!-- Enhanced SEO Title -->
+    <title>
+      My First OAuth 2.0 Integration: From Zero to Production | Kripanshu Singh
+    </title>
+
+    <!-- Enhanced Meta Description -->
+    <meta
+      name="description"
+      content="Complete guide to OAuth 2.0 vs other authentication methods. Learn Authorization vs Authentication differences, detailed comparison tables, implementation timelines, and real-world experience from $1M+ ad spend system at Messold Technologies."
+    />
+
+    <!-- Enhanced Keywords -->
+    <meta
+      name="keywords"
+      content="OAuth 2.0 vs JWT vs Sessions, Authorization vs Authentication difference, OAuth implementation guide, Authentication comparison table, API security methods, Backend authentication, OAuth protocol explanation, Google OAuth tutorial, JWT tokens, Session-based auth, Basic authentication, SAML, Software Engineering, Kripanshu Singh, Messold Technologies, Authentication flows, OAuth security, API development"
+    />
+
+    <!-- Author and Publication Info -->
+    <meta name="author" content="Kripanshu Singh" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <link
+      rel="canonical"
+      href="https://www.kripanshu.me/blog/posts/my-first-oauth-integration/"
+    />
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="article:published_time" content="2025-08-23T00:00:00Z" />
+    <meta name="article:modified_time" content="2025-08-24T00:00:00Z" />
+    <meta name="article:author" content="Kripanshu Singh" />
+    <meta name="article:section" content="Web Development" />
+    <meta name="article:tag" content="OAuth 2.0" />
+    <meta name="article:tag" content="JWT" />
+    <meta name="article:tag" content="Sessions" />
+    <meta name="article:tag" content="API Security" />
+    <meta name="article:tag" content="Authentication" />
+    <meta name="article:tag" content="Authorization" />
+    <meta name="dc.language" content="en-US" />
+    <meta
+      name="dc.title"
+      content="My First OAuth 2.0 Integration: From Zero to Production"
+    />
+    <meta name="dc.creator" content="Kripanshu Singh" />
+    <meta
+      name="dc.subject"
+      content="OAuth 2.0, Authentication Methods, API Security"
+    />
+    <meta
+      name="dc.description"
+      content="Complete guide comparing OAuth 2.0 vs other authentication methods with detailed comparison tables and real-world implementation experience."
+    />
+
+    <!-- Open Graph Tags for Social Media -->
+    <meta
+      property="og:title"
+      content="My First OAuth 2.0 Integration: From Zero to Production"
+    />
+    <meta
+      property="og:description"
+      content="Complete OAuth 2.0 vs authentication methods guide. Learn Authorization vs Authentication differences, detailed comparison tables with JWT, Sessions, API Keys, and real implementation experience from $1M+ system."
+    />
+    <meta
+      property="og:image"
+      content="https://www.kripanshu.me/blog/posts/my-first-oauth-integration/assets/my_first_oauth.png"
+    />
+    <meta
+      property="og:url"
+      content="https://www.kripanshu.me/blog/posts/my-first-oauth-integration/"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:site_name"
+      content="Kripanshu Singh - Software Engineer Blog"
+    />
+    <meta property="article:author" content="Kripanshu Singh" />
+    <meta property="article:published_time" content="2025-08-23T00:00:00Z" />
+    <meta property="article:modified_time" content="2025-08-23T00:00:00Z" />
+    <meta property="article:section" content="Web Development" />
+    <meta property="article:tag" content="OAuth 2.0" />
+    <meta property="article:tag" content="Google OAuth" />
+    <meta property="article:tag" content="API Security" />
+    <meta property="article:tag" content="Backend Development" />
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="My First OAuth 2.0 Integration: From Zero to Production"
+    />
+    <meta
+      name="twitter:description"
+      content="Complete guide: OAuth 2.0 vs JWT vs Sessions vs API Keys. Learn Authorization vs Authentication differences with detailed comparison tables and real-world implementation experience."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.kripanshu.me/blog/posts/my-first-oauth-integration/assets/my_first_oauth.png"
+    />
+    <meta name="twitter:creator" content="@kripanshu_singh" />
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "My First OAuth 2.0 Integration: From Zero to Production",
+        "description": "Complete guide comparing OAuth 2.0 vs JWT vs Sessions vs API Keys vs Basic Auth vs SAML. Learn Authorization vs Authentication differences, detailed comparison tables with implementation times, security levels, and real-world production experience from $1M+ ad spend system.",
+        "image": "https://www.kripanshu.me/blog/posts/my-first-oauth-integration/assets/my_first_oauth.png",
+        "author": {
+          "@type": "Person",
+          "name": "Kripanshu Singh",
+          "url": "https://www.kripanshu.me/",
+          "jobTitle": "Software Engineer",
+          "description": "Software Engineer specializing in backend systems and full-stack applications with experience at Aarogya ID and Messold Technologies"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Kripanshu Singh",
+          "url": "https://www.kripanshu.me/"
+        },
+        "datePublished": "2025-08-23",
+        "dateModified": "2025-08-23",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.kripanshu.me/blog/posts/my-first-oauth-integration/"
+        },
+        "keywords": [
+          "OAuth 2.0",
+          "JWT vs Sessions",
+          "Authorization vs Authentication",
+          "API Security",
+          "Authentication Methods Comparison",
+          "Backend Development",
+          "OAuth Protocol",
+          "Session-based Authentication",
+          "Basic Authentication",
+          "SAML Authentication",
+          "Software Engineering"
+        ],
+        "wordCount": 3500,
+        "articleSection": "Web Development",
+        "inLanguage": "en-US"
+      }
+    </script>
+
+    <!-- FAQ Structured Data for Better SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the difference between Authorization and Authentication?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Authentication answers 'Who are you?' - it's about proving your identity (like logging in with username/password). Authorization answers 'What can you do?' - it's about determining what permissions and access rights you have (like allowing an app to read your calendar). OAuth is primarily an authorization protocol, not authentication."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "When should I use OAuth 2.0 vs JWT vs Sessions?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Use OAuth 2.0 when accessing third-party APIs or when users shouldn't share passwords with your app. Use JWT for SPAs, mobile apps, and microservices where you need stateless authentication. Use Sessions for traditional web apps with server-side rendering where you control both frontend and backend."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is OAuth 2.0 secure for production applications?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, OAuth 2.0 is very secure when implemented correctly. It provides industry-standard security with no password sharing, granular permissions through scopes, and revocable access. It's used by systems handling $1M+ ad spend and millions of users. Key security practices include using HTTPS everywhere, implementing state parameter for CSRF protection, and proper token management."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does it take to implement OAuth 2.0?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For developers new to OAuth, expect 5-7 days including learning time. The complexity comes from understanding concepts like authorization flows, token refresh, and security best practices. Once you understand the protocol, implementation becomes much faster for subsequent projects."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <!-- Breadcrumb Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.kripanshu.me/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://www.kripanshu.me/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "OAuth 2.0 Integration Guide",
+            "item": "https://www.kripanshu.me/blog/posts/my-first-oauth-integration/"
+          }
+        ]
+      }
+    </script>
+
+    <!-- Enhanced Favicons for Better Search Results -->
+    <link rel="icon" type="image/png" href="../../../icon.png" />
+    <link rel="icon" type="image/png" href="../../../assets/img/favicon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../../../assets/img/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="../../../site.webmanifest" />
+    <meta name="theme-color" content="#0563bb" />
+
+    <!-- Performance and SEO Optimizations -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="msapplication-TileColor" content="#0563bb" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="../../assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="../../assets/vendor/swiper/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../../assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS Files -->
+    <link href="../../assets/css/main.css" rel="stylesheet" />
+    <link href="../../../assets/css/style.css" rel="stylesheet" />
+    <link href="../../assets/css/blog-post.css" rel="stylesheet" />
+
+    <!-- Prism.js CSS for syntax highlighting -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="blog-details-page">
+    <!-- ======= Mobile nav toggle button ======= -->
+    <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex flex-column justify-content-center">
+      <nav id="navbar" class="navbar nav-menu">
+        <ul>
+          <li>
+            <a href="../../../index.html" class="nav-link"
+              ><i class="bx bx-home"></i> <span>Home</span></a
+            >
+          </li>
+          <li>
+            <a href="../../../index.html#about" class="nav-link"
+              ><i class="bx bx-user"></i> <span>About</span></a
+            >
+          </li>
+          <li>
+            <a href="../../../index.html#resume" class="nav-link"
+              ><i class="bx bx-file-blank"></i> <span>Resume</span></a
+            >
+          </li>
+          <li>
+            <a href="../../../index.html#projects" class="nav-link"
+              ><i class="bx bx-book-content"></i> <span>Projects</span></a
+            >
+          </li>
+          <li>
+            <a href="../../index.html" class="nav-link active"
+              ><i class="bx bx-pencil"></i> <span>Blog</span></a
+            >
+          </li>
+          <li>
+            <a href="../../../index.html#contact" class="nav-link"
+              ><i class="bx bx-envelope"></i> <span>Contact</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <div class="row">
+          <div class="">
+            <!-- Blog Details Section -->
+            <section id="blog-details" class="blog-details section">
+              <div class="container">
+                <article class="article">
+                  <div class="hero-img" data-aos="fade-up">
+                    <img
+                      src="assets/my_first_oauth.png"
+                      alt="My First OAuth 2.0 Integration Guide"
+                      class="img-fluid"
+                      loading="lazy"
+                    />
+                    <div class="meta-overlay">
+                      <div class="meta-categories">
+                        <a class="category">Authentication</a>
+                        <span class="divider">•</span>
+                        <span class="reading-time"
+                          ><i class="bi bi-clock"></i> 6 min read</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="article-content"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <div class="content-header">
+                      <h1 class="title">
+                        My First OAuth 2.0 Integration: From Zero to Production
+                      </h1>
+
+                      <div class="author-info">
+                        <div class="author-details">
+                          <img
+                            src="../../../assets/img/profile-img4.jpg"
+                            alt="Kripanshu Singh"
+                            class="author-img"
+                          />
+                          <div class="info">
+                            <h4>Kripanshu Singh</h4>
+                            <span class="role">Full Stack Developer</span>
+                          </div>
+                        </div>
+                        <div class="post-meta">
+                          <span class="date"
+                            ><i class="bi bi-calendar3"></i> Aug 23, 2025</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="content">
+                      <p class="lead">
+                        <strong
+                          >"Kripanshu, can you add Google OAuth to our marketing
+                          dashboard? We need it by next week."</strong
+                        >
+                      </p>
+
+                      <p>
+                        Week 2 at Messold Technologies. I stared at my screen,
+                        trying to look confident while internally panicking.
+                        OAuth? I'd heard the term, sure. But implementing it?
+                        For a system handling $1M+ monthly ad spend?
+                      </p>
+
+                      <p>
+                        <strong>Spoiler alert:</strong> I figured it out. And it
+                        wasn't nearly as terrifying as I thought.
+                      </p>
+
+                      <h2>The "What The Hell Is OAuth?" Moment</h2>
+
+                      <p>
+                        Let me paint you a picture. It's Monday morning, coffee
+                        in hand, and my manager drops this bombshell. I
+                        immediately did what any self-respecting developer does:
+                        opened 47 tabs and started Googling.
+                      </p>
+
+                      <div class="content-grid">
+                        <div class="row g-4">
+                          <div class="col-md-6">
+                            <div class="info-card">
+                              <h4>😰 My Initial Confusion</h4>
+                              <ul>
+                                <li>
+                                  "Authorization vs Authentication?? WHAT'S THE
+                                  DIFFERENCE?!"
+                                </li>
+                                <li>
+                                  "Wait, OAuth isn't for logging in users?"
+                                </li>
+                                <li>"Why does Google ask for permissions?"</li>
+                                <li>"Is this about identity or access?"</li>
+                                <li>
+                                  "OAuth vs OAuth 2.0 vs OpenID Connect???"
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="info-card">
+                              <h4>🤯 What I Finally Learned</h4>
+                              <ul>
+                                <li>
+                                  <strong>Authorization</strong> = "What can you
+                                  access?"
+                                </li>
+                                <li>
+                                  <strong>Authentication</strong> = "Who are
+                                  you?"
+                                </li>
+                                <li>
+                                  OAuth is about <strong>permissions</strong>,
+                                  not identity
+                                </li>
+                                <li>
+                                  It's like giving someone a key to your house
+                                </li>
+                                <li>Focus on scopes, not user login</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <h2>OAuth Explained</h2>
+
+                      <p>
+                        After hours of reading dense documentation, here's the
+                        analogy that finally made it click for me:
+                      </p>
+
+                      <div class="highlight-box">
+                        <h3>🏨 Hotel Key Card Analogy</h3>
+                        <p>
+                          <strong>You:</strong> Hotel guest<br />
+                          <strong>Hotel:</strong> Google (or any OAuth
+                          provider)<br />
+                          <strong>Gym:</strong> My app (Messold dashboard)<br />
+                          <strong>Key Card:</strong> OAuth token
+                        </p>
+                        <p>
+                          Instead of giving the gym your master room key, the
+                          hotel gives you a special gym-only card. It expires at
+                          midnight, and you can cancel it anytime without
+                          affecting your room access.
+                        </p>
+                      </div>
+
+                      <h2>The Implementation Reality Check</h2>
+
+                      <p>Here's what actually happened during my first week:</p>
+
+                      <div class="table-responsive">
+                        <table class="table table-striped">
+                          <thead>
+                            <tr>
+                              <th>Day</th>
+                              <th>What I Thought I'd Do</th>
+                              <th>What Actually Happened</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><strong>Monday</strong></td>
+                              <td>Read OAuth docs for 1 hour, start coding</td>
+                              <td>
+                                Spent 6 hours confused by authorization flows
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><strong>Tuesday</strong></td>
+                              <td>Build basic OAuth flow</td>
+                              <td>
+                                Discovered Google OAuth Playground (game
+                                changer!)
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><strong>Wednesday</strong></td>
+                              <td>Add security features</td>
+                              <td>Fought with CORS errors and redirect URIs</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Thursday</strong></td>
+                              <td>Test and polish</td>
+                              <td>Finally got my first successful token!</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Friday</strong></td>
+                              <td>Deploy to production</td>
+                              <td>Realized I needed to handle token refresh</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+
+                      <h2>
+                        Authorization vs Authentication: The Confusion That
+                        Nearly Broke Me
+                      </h2>
+
+                      <p>
+                        Tuesday was my turning point, but not because of any
+                        tool. It was when I finally understood the difference
+                        between <strong>Authorization</strong> and
+                        <strong>Authentication</strong>. This confusion had me
+                        spinning for hours.
+                      </p>
+
+                      <div class="content-grid">
+                        <div class="row g-4">
+                          <div class="col-md-6">
+                            <div class="info-card">
+                              <h4>🔐 Authentication: "Who are you?"</h4>
+                              <p>
+                                <strong>Definition:</strong> Proving your
+                                identity
+                              </p>
+                              <div class="highlight-box">
+                                <h5>🏨 Hotel Analogy</h5>
+                                <p>
+                                  Showing your ID at the front desk to prove
+                                  you're <strong>John Smith</strong> who made
+                                  the reservation.
+                                </p>
+                              </div>
+                              <h5>Examples:</h5>
+                              <ul>
+                                <li>
+                                  Logging into Gmail with username/password
+                                </li>
+                                <li>Face ID unlocking your phone</li>
+                                <li>Showing passport at airport security</li>
+                                <li>Two-factor authentication code</li>
+                              </ul>
+                              <p>
+                                <strong>Result:</strong> "Yes, you are who you
+                                claim to be"
+                              </p>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="info-card">
+                              <h4>🔑 Authorization: "What can you do?"</h4>
+                              <p>
+                                <strong>Definition:</strong> Determining
+                                permissions and access rights
+                              </p>
+                              <div class="highlight-box">
+                                <h5>🏨 Hotel Analogy</h5>
+                                <p>
+                                  Your key card lets you into
+                                  <strong>your room, the gym, and pool</strong>
+                                  - but not the presidential suite or staff
+                                  areas.
+                                </p>
+                              </div>
+                              <h5>Examples:</h5>
+                              <ul>
+                                <li>
+                                  Google asks: "Allow app to read your
+                                  calendar?"
+                                </li>
+                                <li>Admin vs regular user permissions</li>
+                                <li>File folder access restrictions</li>
+                                <li>
+                                  API scope permissions (read-only vs write)
+                                </li>
+                              </ul>
+                              <p>
+                                <strong>Result:</strong> "You can access these
+                                specific resources"
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <h2>What I Wish Someone Had Told Me</h2>
+
+                      <p>
+                        Here are the insights that would've saved me days of
+                        confusion:
+                      </p>
+
+                      <div class="content-grid">
+                        <div class="row g-4">
+                          <div class="col-md-6">
+                            <div class="info-card">
+                              <h4>😅 Common Beginner Mistakes</h4>
+                              <ul>
+                                <li>
+                                  <strong>Overthinking flows:</strong> Start
+                                  with Authorization Code
+                                </li>
+                                <li>
+                                  <strong>Ignoring state parameter:</strong> It
+                                  prevents CSRF attacks
+                                </li>
+                                <li>
+                                  <strong
+                                    >Storing tokens in localStorage:</strong
+                                  >
+                                  Use httpOnly cookies
+                                </li>
+                                <li>
+                                  <strong>Not handling refresh:</strong> Tokens
+                                  expire!
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="info-card">
+                              <h4>🎯 What Actually Matters</h4>
+                              <ul>
+                                <li>
+                                  <strong>Security first:</strong> HTTPS
+                                  everywhere
+                                </li>
+                                <li>
+                                  <strong>Keep it simple:</strong> Don't
+                                  over-engineer
+                                </li>
+                                <li>
+                                  <strong>Test thoroughly:</strong> Edge cases
+                                  bite
+                                </li>
+                                <li>
+                                  <strong>Plan for scale:</strong> Token refresh
+                                  is crucial
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <blockquote>
+                        <p>
+                          "Realize OAuth isn't some proprietary Google service.
+                          It's an open protocol. Once I understood that OAuth
+                          2.0 is a standard that works everywhere - GitHub,
+                          Facebook, Microsoft - suddenly the whole ecosystem
+                          made sense"
+                        </p>
+                      </blockquote>
+
+                      <h2>Detailed Comparison: OAuth vs Other Auth Methods</h2>
+
+                      <p>
+                        Here's the comprehensive breakdown I wish I had when I
+                        was choosing between different authentication methods:
+                      </p>
+
+                      <style>
+                        .auth-comparison-table {
+                          font-size: 14px;
+                        }
+                        .auth-comparison-table td,
+                        .auth-comparison-table th {
+                          padding: 15px 12px !important;
+                          vertical-align: top;
+                          line-height: 1.6;
+                        }
+                        .auth-comparison-table .flow-steps {
+                          font-size: 12px;
+                          line-height: 1.4;
+                        }
+                        .auth-comparison-table .flow-steps div {
+                          margin-bottom: 2px;
+                        }
+                        .auth-comparison-table ul {
+                          margin-bottom: 0;
+                          padding-left: 16px;
+                        }
+                        .auth-comparison-table li {
+                          margin-bottom: 6px;
+                        }
+                        .auth-comparison-table .badge {
+                          font-size: 11px;
+                          padding: 4px 8px;
+                        }
+                      </style>
+
+                      <div class="table-responsive">
+                        <table
+                          class="table comparison-table table-bordered table-striped auth-comparison-table"
+                        >
+                          <thead class="table table-bordered">
+                            <tr>
+                              <th style="min-width: 180px; width: 180px">
+                                Method
+                              </th>
+                              <th style="min-width: 280px; width: 280px">
+                                Authentication Flow
+                              </th>
+                              <th style="min-width: 220px; width: 220px">
+                                When to Use
+                              </th>
+                              <th style="min-width: 280px; width: 280px">
+                                Pros
+                              </th>
+                              <th style="min-width: 280px; width: 280px">
+                                Cons
+                              </th>
+                              <th style="min-width: 180px; width: 180px">
+                                Security Level
+                              </th>
+                              <th style="min-width: 180px; width: 180px">
+                                Implementation Time
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <strong>OAuth 2.0</strong><br /><small
+                                  class="text-muted"
+                                  >Authorization Code Flow</small
+                                >
+                              </td>
+                              <td>
+                                <div class="flow-steps">
+                                  <div>1. User → Your App</div>
+                                  <div>↓</div>
+                                  <div>2. App → OAuth Provider</div>
+                                  <div>↓</div>
+                                  <div>3. User authorizes</div>
+                                  <div>↓</div>
+                                  <div>4. Provider → App (code)</div>
+                                  <div>↓</div>
+                                  <div>5. App exchanges code → token</div>
+                                </div>
+                              </td>
+                              <td>
+                                • Third-party API access<br />
+                                • User data from Google/FB<br />
+                                • Mobile apps<br />
+                                • Multi-tenant systems<br />
+                                • Marketing dashboards
+                              </td>
+                              <td>
+                                • <strong>Secure:</strong> No password
+                                sharing<br />
+                                • <strong>Granular:</strong> Scope-based
+                                permissions<br />
+                                • <strong>Standard:</strong> Widely supported<br />
+                                • <strong>Revocable:</strong> Users control
+                                access<br />
+                                • <strong>Scalable:</strong> Enterprise-ready
+                              </td>
+                              <td>
+                                • <strong>Complex:</strong> Multiple steps<br />
+                                • <strong>Token mgmt:</strong> Refresh
+                                handling<br />
+                                • <strong>Debugging:</strong> Many moving
+                                parts<br />
+                                • <strong>Setup:</strong> Provider
+                                registration<br />
+                                • <strong>Learning curve:</strong> Concepts to
+                                master
+                              </td>
+                              <td>
+                                <span class="badge bg-success">Very High</span
+                                ><br /><small>Industry standard security</small>
+                              </td>
+                              <td>
+                                <span class="badge bg-warning text-dark"
+                                  >5-7 days</span
+                                ><br /><small>Initial learning required</small>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <strong>JWT Tokens</strong><br /><small
+                                  class="text-muted"
+                                  >Stateless Bearer</small
+                                >
+                              </td>
+                              <td>
+                                <div class="flow-steps">
+                                  <div>1. User → Login credentials</div>
+                                  <div>↓</div>
+                                  <div>2. Server validates</div>
+                                  <div>↓</div>
+                                  <div>3. Server → JWT token</div>
+                                  <div>↓</div>
+                                  <div>4. Client stores token</div>
+                                  <div>↓</div>
+                                  <div>5. Include in API headers</div>
+                                </div>
+                              </td>
+                              <td>
+                                • SPAs (React/Vue)<br />
+                                • Mobile app APIs<br />
+                                • Microservices<br />
+                                • Distributed systems<br />
+                                • Real-time apps
+                              </td>
+                              <td>
+                                • <strong>Stateless:</strong> No server
+                                storage<br />
+                                • <strong>Scalable:</strong> Horizontal
+                                scaling<br />
+                                • <strong>Self-contained:</strong> All data in
+                                token<br />
+                                • <strong>Cross-domain:</strong> CORS
+                                friendly<br />
+                                • <strong>Mobile:</strong> Easy
+                                storage/transmission
+                              </td>
+                              <td>
+                                • <strong>Size:</strong> Larger than session
+                                IDs<br />
+                                • <strong>Revocation:</strong> Hard to
+                                invalidate<br />
+                                • <strong>XSS risk:</strong> If stored in
+                                localStorage<br />
+                                • <strong>Clock skew:</strong> Time sync
+                                issues<br />
+                                • <strong>Secret mgmt:</strong> Key rotation
+                                complexity
+                              </td>
+                              <td>
+                                <span class="badge bg-success">High</span
+                                ><br /><small>When implemented correctly</small>
+                              </td>
+                              <td>
+                                <span class="badge bg-info">3-5 days</span
+                                ><br /><small>Moderate complexity</small>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <strong>Session-Based</strong><br /><small
+                                  class="text-muted"
+                                  >Cookie Authentication</small
+                                >
+                              </td>
+                              <td>
+                                <div class="flow-steps">
+                                  <div>1. User → Login form</div>
+                                  <div>↓</div>
+                                  <div>2. Server validates</div>
+                                  <div>↓</div>
+                                  <div>3. Create session ID</div>
+                                  <div>↓</div>
+                                  <div>4. Set httpOnly cookie</div>
+                                  <div>↓</div>
+                                  <div>5. Auto-include in requests</div>
+                                </div>
+                              </td>
+                              <td>
+                                • Traditional web apps<br />
+                                • Server-side rendering<br />
+                                • E-commerce sites<br />
+                                • Admin panels<br />
+                                • CMS platforms
+                              </td>
+                              <td>
+                                • <strong>Server control:</strong> Full session
+                                mgmt<br />
+                                • <strong>Secure:</strong> httpOnly cookies<br />
+                                • <strong>Immediate:</strong> Instant logout<br />
+                                • <strong>Familiar:</strong> Well-understood
+                                pattern<br />
+                                • <strong>Stateful:</strong> Complex workflows
+                              </td>
+                              <td>
+                                • <strong>Scaling:</strong> Server state
+                                required<br />
+                                • <strong>Mobile:</strong> Cookie limitations<br />
+                                • <strong>CORS:</strong> Cross-domain
+                                complexity<br />
+                                • <strong>Memory:</strong> Server storage
+                                needed<br />
+                                • <strong>Load balancing:</strong> Sticky
+                                sessions
+                              </td>
+                              <td>
+                                <span class="badge bg-success">High</span
+                                ><br /><small>With proper implementation</small>
+                              </td>
+                              <td>
+                                <span class="badge bg-success">1-2 days</span
+                                ><br /><small>Well-established pattern</small>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <strong>API Keys</strong><br /><small
+                                  class="text-muted"
+                                  >Static Token</small
+                                >
+                              </td>
+                              <td>
+                                <div class="flow-steps">
+                                  <div>1. Developer → Provider dashboard</div>
+                                  <div>↓</div>
+                                  <div>2. Generate API key</div>
+                                  <div>↓</div>
+                                  <div>3. Copy to app config</div>
+                                  <div>↓</div>
+                                  <div>4. Include in headers</div>
+                                  <div>↓</div>
+                                  <div>5. Direct API access</div>
+                                </div>
+                              </td>
+                              <td>
+                                • Server-to-server<br />
+                                • Third-party services<br />
+                                • Payment processing<br />
+                                • Email/SMS APIs<br />
+                                • Development/testing
+                              </td>
+                              <td>
+                                • <strong>Simple:</strong> Just add to
+                                headers<br />
+                                • <strong>Fast:</strong> Immediate setup<br />
+                                • <strong>No user flow:</strong> Background
+                                services<br />
+                                • <strong>Lightweight:</strong> Minimal
+                                overhead<br />
+                                • <strong>Universal:</strong> Supported
+                                everywhere
+                              </td>
+                              <td>
+                                •
+                                <strong>No user context:</strong> Service-level
+                                only<br />
+                                • <strong>Security risk:</strong> If key
+                                leaks<br />
+                                • <strong>Rotation:</strong> Manual key
+                                updates<br />
+                                • <strong>Rate limits:</strong> Shared across
+                                all users<br />
+                                • <strong>Audit trail:</strong> Limited tracking
+                              </td>
+                              <td>
+                                <span class="badge bg-warning text-dark"
+                                  >Medium</span
+                                ><br /><small>Depends on key management</small>
+                              </td>
+                              <td>
+                                <span class="badge bg-success">30 minutes</span
+                                ><br /><small>Almost instant</small>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <strong>Basic Auth</strong><br /><small
+                                  class="text-muted"
+                                  >Username:Password</small
+                                >
+                              </td>
+                              <td>
+                                <div class="flow-steps">
+                                  <div>1. Client → Username:Password</div>
+                                  <div>↓</div>
+                                  <div>2. Base64 encode</div>
+                                  <div>↓</div>
+                                  <div>3. Add to Authorization header</div>
+                                  <div>↓</div>
+                                  <div>4. Server decodes & validates</div>
+                                  <div>↓</div>
+                                  <div>5. Grant/deny access</div>
+                                </div>
+                              </td>
+                              <td>
+                                • Internal tools<br />
+                                • Quick prototypes<br />
+                                • Legacy integrations<br />
+                                • Admin interfaces<br />
+                                • Development APIs
+                              </td>
+                              <td>
+                                • <strong>Dead simple:</strong> HTTP standard<br />
+                                • <strong>Universal:</strong> All clients
+                                support<br />
+                                • <strong>No setup:</strong> Built into HTTP<br />
+                                • <strong>Transparent:</strong> Easy
+                                debugging<br />
+                                • <strong>Fast:</strong> Immediate
+                                implementation
+                              </td>
+                              <td>
+                                • <strong>Credentials:</strong> Sent every
+                                request<br />
+                                • <strong>Not scalable:</strong> No
+                                expiration<br />
+                                • <strong>Base64:</strong> Not encryption<br />
+                                • <strong>No permissions:</strong> All or
+                                nothing<br />
+                                • <strong>No logout:</strong> Credentials cached
+                              </td>
+                              <td>
+                                <span class="badge bg-danger">Low</span
+                                ><br /><small>Only over HTTPS</small>
+                              </td>
+                              <td>
+                                <span class="badge bg-success">15 minutes</span
+                                ><br /><small>Immediate setup</small>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+
+                      <h2>Key Takeaways for Your First OAuth</h2>
+
+                      <div class="content-grid">
+                        <div class="row g-4">
+                          <div class="col-md-4">
+                            <div class="info-card">
+                              <h4>🎯 Start Here</h4>
+                              <p>
+                                <strong>Use OAuth Playground first</strong> -
+                                Understand the flow before writing code
+                              </p>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="info-card">
+                              <h4>🔒 Security Basics</h4>
+                              <p>
+                                <strong
+                                  >State parameter is non-negotiable</strong
+                                >
+                                - It prevents CSRF attacks
+                              </p>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="info-card">
+                              <h4>⚡ Keep It Simple</h4>
+                              <p>
+                                <strong>Authorization Code flow</strong> - Works
+                                for 90% of use cases
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <p>
+                        <strong>Final thought:</strong> OAuth seemed
+                        intimidating at first, but it's really just a structured
+                        way to share permissions. Once you understand the flow
+                        and see it working once, it becomes second nature.
+                      </p>
+                    </div>
+
+                    <!-- Tags and Share Section -->
+                    <div class="meta-bottom">
+                      <div class="tags-section">
+                        <h4>Related Topics</h4>
+                        <div class="tags">
+                          <span class="tag">OAuth 2.0</span>
+                          <span class="tag">Google OAuth</span>
+                          <span class="tag">API Security</span>
+                          <span class="tag">Backend Development</span>
+                          <span class="tag">Authentication</span>
+                          <span class="tag">Node.js</span>
+                        </div>
+                      </div>
+
+                      <div class="share-section">
+                        <h4>Share Article</h4>
+                        <div class="social-links">
+                          <a
+                            href="https://twitter.com/intent/tweet?url=https://www.kripanshu.me/blog/posts/my-first-oauth-integration/&text=My%20First%20OAuth%202.0%20Integration:%20From%20Zero%20to%20Production%20by%20@kripanshu_singh&hashtags=OAuth,GoogleOAuth,APISecurity,WebDev"
+                            class="twitter"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Share on X (Twitter)"
+                            ><span style="font-weight: bold; font-size: 16px"
+                              >𝕏</span
+                            ></a
+                          >
+                          <a
+                            href="https://www.facebook.com/sharer/sharer.php?u=https://www.kripanshu.me/blog/posts/my-first-oauth-integration/"
+                            class="facebook"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Share on Facebook"
+                            ><i class="bi bi-facebook"></i
+                          ></a>
+                          <a
+                            href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.kripanshu.me/blog/posts/my-first-oauth-integration/"
+                            class="linkedin"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Share on LinkedIn"
+                            ><i class="bi bi-linkedin"></i
+                          ></a>
+                          <a
+                            href="#"
+                            class="copy-link"
+                            title="Copy Link"
+                            onclick="copyToClipboard('https://www.kripanshu.me/blog/posts/my-first-oauth-integration/'); return false;"
+                            ><i class="bi bi-link-45deg"></i
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+            <!-- /Blog Details Section -->
+
+            <!-- Blog Author Section -->
+            <section id="blog-author" class="blog-author section">
+              <div class="container" data-aos="fade-up">
+                <div class="author-box" data-aos="fade-up" data-aos-delay="100">
+                  <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-4 text-center">
+                      <img
+                        src="/assets/img/img.png"
+                        class="author-img rounded-circle"
+                        alt="Kripanshu Singh"
+                        loading="lazy"
+                        data-aos="zoom-in"
+                        data-aos-delay="200"
+                      />
+
+                      <div class="author-social-links mt-3">
+                        <a
+                          href="https://github.com/kripanshu-singh"
+                          class="github"
+                          ><i class="bi bi-github"></i
+                        ></a>
+                        <a
+                          href="https://www.linkedin.com/in/kripanshu-singh/"
+                          class="linkedin"
+                          ><i class="bi bi-linkedin"></i
+                        ></a>
+                        <a
+                          href="mailto:kripanshusingh160305@gmail.com"
+                          class="email"
+                          ><i class="bi bi-envelope"></i
+                        ></a>
+                        <a href="https://www.kripanshu.me/" class="website"
+                          ><i class="bi bi-globe"></i
+                        ></a>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-9 col-md-8">
+                      <div class="author-content">
+                        <h3 class="author-name">Kripanshu Singh</h3>
+                        <span class="author-title"
+                          >Software Engineer &amp; Full Stack Developer</span
+                        >
+
+                        <div class="author-bio mt-3">
+                          <p>
+                            Software Engineer with expertise in backend APIs,
+                            authentication systems, and full-stack development.
+                            Previously contributed to India's national health
+                            registries at
+                            <strong>Aarogya ID</strong>, where I built scalable
+                            applications processing millions of requests and
+                            improved API response times by 40%.
+                          </p>
+
+                          <p>
+                            Currently seeking new opportunities while sharing
+                            practical insights from real-world development
+                            experience to help fellow developers make better
+                            technical decisions.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- /Blog Author Section -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/php-email-form/validate.js"></script>
+    <script src="../../assets/vendor/aos/aos.js"></script>
+    <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="../../../assets/js/main.js"></script>
+
+    <!-- Social Sharing Functions -->
+    <script>
+      function copyToClipboard(text) {
+        navigator.clipboard
+          .writeText(text)
+          .then(() => {
+            showCopyNotification("Link copied to clipboard!");
+          })
+          .catch((err) => {
+            showCopyNotification("Link copied to clipboard!");
+          });
+      }
+
+      // Toast notification function
+      function showCopyNotification(message) {
+        const toast = document.createElement("div");
+        toast.style.cssText = `
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          background: rgba(76, 175, 80, 0.95);
+          color: white;
+          padding: 12px 20px;
+          border-radius: 6px;
+          font-size: 14px;
+          font-weight: 500;
+          z-index: 10000;
+          transform: translateX(100%);
+          transition: transform 0.3s ease;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        `;
+        toast.textContent = message;
+        document.body.appendChild(toast);
+
+        // Animate in
+        setTimeout(() => {
+          toast.style.transform = "translateX(0)";
+        }, 10);
+
+        // Animate out and remove
+        setTimeout(() => {
+          toast.style.transform = "translateX(100%)";
+          setTimeout(() => {
+            document.body.removeChild(toast);
+          }, 300);
+        }, 2000);
+      }
+    </script>
+  </body>
+</html>
