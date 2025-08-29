@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  
+  <!-- Node.js vs Bun vs Deno Runtime Comparison -->
+  <url>
+    <loc>https://www.kripanshu.me/blog/posts/node-bun-deno/</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.kripanshu.me/blog/posts/node-bun-deno/assets/node_bun_deno.png</image:loc>
+      <image:title>Node.js vs Bun vs Deno JavaScript Runtime Comparison</image:title>
+      <image:caption>Complete comparison guide showing performance benchmarks, package management differences, TypeScript support, and real-world usage recommendations for Node.js, Bun, and Deno JavaScript runtimes</image:caption>
+    </image:image>
+    <news:news>
+      <news:publication>
+        <news:name>Kripanshu Singh Blog</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-08-29</news:publication_date>
+      <news:title>Node.js vs Bun vs Deno: The Ultimate JavaScript Runtime Comparison</news:title>
+      <news:keywords>Node.js, Bun, Deno, JavaScript Runtime, Performance Comparison, TypeScript Support, Package Management, npm vs deno, Backend Development, Server-side JavaScript, JavaScript 2025</news:keywords>
+    </news:news>
+  </url>
+
+  <!-- OAuth 2.0 Integration Guide -->
+  <url>
+    <loc>https://www.kripanshu.me/blog/posts/my-first-oauth-integration/</loc>
+    <lastmod>2025-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.kripanshu.me/blog/posts/my-first-oauth-integration/assets/my_first_oauth.png</image:loc>
+      <image:title>OAuth 2.0 Integration Guide - Authorization vs Authentication</image:title>
+      <image:caption>Complete OAuth 2.0 implementation guide comparing different authentication methods including JWT, Sessions, API Keys, Basic Auth, and SAML with detailed comparison tables and real-world production experience</image:caption>
+    </image:image>
+    <news:news>
+      <news:publication>
+        <news:name>Kripanshu Singh Blog</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-08-23</news:publication_date>
+      <news:title>My First OAuth 2.0 Integration: From Zero to Production</news:title>
+      <news:keywords>OAuth 2.0, JWT vs Sessions, Authorization vs Authentication, API Security, Google OAuth, OAuth implementation, Authentication methods comparison, Backend security, OAuth tutorial</news:keywords>
+    </news:news>
+  </url>
+
+  <!-- JWT vs Sessions Authentication Guide -->
+  <url>
+    <loc>https://www.kripanshu.me/blog/posts/jwt-vs-sessions/</loc>
+    <lastmod>2025-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.kripanshu.me/blog/posts/jwt-vs-sessions/assets/jwt_vs_session.png</image:loc>
+      <image:title>JWT vs Sessions Authentication Comparison</image:title>
+      <image:caption>Comprehensive guide comparing JWT tokens and Session-based authentication with practical examples, code samples, and decision framework for web developers</image:caption>
+    </image:image>
+    <news:news>
+      <news:publication>
+        <news:name>Kripanshu Singh Blog</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-08-22</news:publication_date>
+      <news:title>JWT vs Sessions: Complete Authentication Guide 2025</news:title>
+      <news:keywords>JWT tokens, Session authentication, Web security, Authentication comparison, JWT vs Sessions, Backend development, API authentication, Web development security</news:keywords>
+    </news:news>
+  </url>
+
+</urlset>

@@ -6,7 +6,8 @@
 
     <!-- Enhanced SEO Title -->
     <title>
-      Node.js vs Bun vs Deno: The Ultimate JavaScript Runtime Comparison 2025 | Kripanshu Singh
+      Node.js vs Bun vs Deno: The Ultimate JavaScript Runtime Comparison 2025 |
+      Kripanshu Singh
     </title>
 
     <!-- Enhanced Meta Description -->
@@ -366,7 +367,8 @@
                   >
                     <div class="content-header">
                       <h1 class="title">
-                        Node.js vs Bun vs Deno: The Ultimate JavaScript Runtime Comparison
+                        Node.js vs Bun vs Deno: The Ultimate JavaScript Runtime
+                        Comparison
                       </h1>
 
                       <div class="author-info">
@@ -392,59 +394,90 @@
                     <div class="content">
                       <p class="lead">
                         <strong
-                          >"Should I stick with Node.js, try the new blazing-fast Bun, or give Deno a shot?"</strong
+                          >"Should I stick with Node.js, try the new
+                          blazing-fast Bun, or give Deno a shot?"</strong
                         >
                       </p>
 
                       <p>
-                        If you're a JavaScript developer in 2025, you've probably heard this debate everywhere. Three months ago, I was in the same boat – comfortable with Node.js but curious about these newer runtimes that everyone's talking about.
+                        If you're a JavaScript developer in 2025, you've
+                        probably heard this debate everywhere. Three months ago,
+                        I was in the same boat – comfortable with Node.js but
+                        curious about these newer runtimes that everyone's
+                        talking about.
                       </p>
 
                       <p>
-                        <strong>Spoiler alert:</strong> I ended up testing all three in production. Here's what I learned, and more importantly, which one you should choose for your next project.
+                        <strong>Spoiler alert:</strong> I ended up testing all
+                        three in production. Here's what I learned, and more
+                        importantly, which one you should choose for your next
+                        project.
                       </p>
 
                       <h2>The JavaScript Runtime Landscape in 2025</h2>
 
                       <p>
-                        Let me set the stage. We're not just comparing apples to apples here – each runtime has a different philosophy:
+                        Let me set the stage. We're not just comparing apples to
+                        apples here – each runtime has a different philosophy:
                       </p>
 
                       <div class="content-grid">
                         <div class="row g-4">
                           <div class="col-md-4">
                             <div class="info-card">
-                              <h4>🟢 Node.js: The Veteran</h4>
+                              <h4>Node.js: The Veteran</h4>
                               <ul>
                                 <li><strong>Born:</strong> 2009</li>
-                                <li><strong>Philosophy:</strong> "JavaScript everywhere"</li>
-                                <li><strong>Strength:</strong> Massive ecosystem</li>
+                                <li>
+                                  <strong>Philosophy:</strong> "JavaScript
+                                  everywhere"
+                                </li>
+                                <li>
+                                  <strong>Strength:</strong> Massive ecosystem
+                                </li>
                                 <li><strong>Engine:</strong> V8 (Chrome)</li>
-                                <li><strong>Community:</strong> Huge, mature</li>
+                                <li>
+                                  <strong>Community:</strong> Huge, mature
+                                </li>
                               </ul>
                             </div>
                           </div>
                           <div class="col-md-4">
                             <div class="info-card">
-                              <h4>🔥 Bun: The Speed Demon</h4>
+                              <h4>Bun: The Speed Demon</h4>
                               <ul>
                                 <li><strong>Born:</strong> 2022</li>
-                                <li><strong>Philosophy:</strong> "Fast by default"</li>
+                                <li>
+                                  <strong>Philosophy:</strong> "Fast by default"
+                                </li>
                                 <li><strong>Strength:</strong> Performance</li>
-                                <li><strong>Engine:</strong> JavaScriptCore (Safari)</li>
-                                <li><strong>Community:</strong> Growing rapidly</li>
+                                <li>
+                                  <strong>Engine:</strong> JavaScriptCore
+                                  (Safari)
+                                </li>
+                                <li>
+                                  <strong>Community:</strong> Growing rapidly
+                                </li>
                               </ul>
                             </div>
                           </div>
                           <div class="col-md-4">
                             <div class="info-card">
-                              <h4>🦕 Deno: The Security-First</h4>
+                              <h4>Deno: The Security-First</h4>
                               <ul>
                                 <li><strong>Born:</strong> 2018</li>
-                                <li><strong>Philosophy:</strong> "Secure by default"</li>
-                                <li><strong>Strength:</strong> Modern standards</li>
+                                <li>
+                                  <strong>Philosophy:</strong> "Secure by
+                                  default"
+                                </li>
+                                <li>
+                                  <strong>Strength:</strong> Modern standards
+                                </li>
                                 <li><strong>Engine:</strong> V8 (Chrome)</li>
-                                <li><strong>Community:</strong> Quality over quantity</li>
+                                <li>
+                                  <strong>Community:</strong> Quality over
+                                  quantity
+                                </li>
                               </ul>
                             </div>
                           </div>
@@ -454,18 +487,21 @@
                       <h2>Performance: The Numbers Don't Lie</h2>
 
                       <p>
-                        Let's talk about what everyone wants to know – speed. I ran the same Express-like server on all three runtimes:
+                        Let's talk about what everyone wants to know – speed. I
+                        ran the same Express-like server on all three runtimes:
                       </p>
 
                       <h3>Simple HTTP Server Benchmark</h3>
-                      <pre class="line-numbers"><code class="language-javascript">// Simple server test - same logic across all runtimes
+                      <pre
+                        class="line-numbers"
+                      ><code class="language-javascript">// Simple server test - same logic across all runtimes
 const server = require('http').createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': 'application/json' });
-  res.end(JSON.stringify({ 
-    message: 'Hello World',
-    timestamp: Date.now(),
-    runtime: process.version || Deno.version || Bun.version
-  }));
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ 
+        message: 'Hello World',
+        timestamp: Date.now(),
+        runtime: process.version || Deno.version || Bun.version
+    }));
 });
 
 server.listen(3000);
@@ -487,14 +523,20 @@ server.listen(3000);
                           <tbody>
                             <tr>
                               <td><strong>Bun 1.0.2</strong></td>
-                              <td><span class="badge bg-success">89,432</span></td>
+                              <td>
+                                <span class="badge bg-success">89,432</span>
+                              </td>
                               <td>4.2ms</td>
                               <td>28MB</td>
                               <td>0.12s</td>
                             </tr>
                             <tr>
                               <td><strong>Node.js 20.5</strong></td>
-                              <td><span class="badge bg-warning text-dark">41,203</span></td>
+                              <td>
+                                <span class="badge bg-warning text-dark"
+                                  >41,203</span
+                                >
+                              </td>
                               <td>9.1ms</td>
                               <td>45MB</td>
                               <td>0.34s</td>
@@ -511,41 +553,48 @@ server.listen(3000);
                       </div>
 
                       <div class="highlight-box">
-                        <h3>🚀 Performance Winner: Bun</h3>
+                        <h3>Performance Winner: Bun</h3>
                         <p>
-                          Bun is <strong>2-3x faster</strong> than Node.js and Deno in HTTP throughput. 
-                          But here's the catch – these are synthetic benchmarks. Real-world performance depends heavily on your use case.
+                          Bun is <strong>2-3x faster</strong> than Node.js and
+                          Deno in HTTP throughput. But here's the catch, these
+                          are synthetic benchmarks. Real-world performance
+                          depends heavily on your use case.
                         </p>
                       </div>
 
-                      <h2>Package Management: A Tale of Three Approaches</h2>
+                      <h2>Package Management:</h2>
 
                       <p>
-                        This is where things get really interesting. Each runtime has a completely different philosophy:
+                        This is where things get really interesting. Each
+                        runtime has a completely different philosophy:
                       </p>
 
                       <h3>Node.js: The npm Ecosystem</h3>
-                      <pre class="line-numbers"><code class="language-bash"># Traditional Node.js approach
+                      <pre
+                        class="line-numbers"
+                      ><code class="language-bash"># Traditional Node.js approach
 npm init -y
 npm install express cors dotenv
 npm install -D nodemon typescript @types/node
 
 # package.json dependency hell
 {
-  "dependencies": {
-    "express": "^4.18.2",
-    "cors": "^2.8.5",
-    "dotenv": "^16.3.1"
-  },
-  "devDependencies": {
-    "nodemon": "^3.0.1",
-    "typescript": "^5.1.6",
-    "@types/node": "^20.5.0"
-  }
+    "dependencies": {
+        "express": "^4.18.2",
+        "cors": "^2.8.5",
+        "dotenv": "^16.3.1"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.1",
+        "typescript": "^5.1.6",
+        "@types/node": "^20.5.0"
+    }
 }</code></pre>
 
                       <h3>Bun: Supercharged Package Management</h3>
-                      <pre class="line-numbers"><code class="language-bash"># Bun - Same packages, way faster
+                      <pre
+                        class="line-numbers"
+                      ><code class="language-bash"># Bun - Same packages, way faster
 bun init
 bun add express cors dotenv
 bun add -d nodemon typescript @types/node
@@ -557,196 +606,27 @@ bun add -d nodemon typescript @types/node
 # bun:  1.4 seconds ⚡</code></pre>
 
                       <h3>Deno: No Package Manager Needed</h3>
-                      <pre class="line-numbers"><code class="language-javascript">// Deno - Direct imports, no package.json
+                      <pre
+                        class="line-numbers"
+                      ><code class="language-javascript">// Deno - Direct imports, no package.json
 import { serve } from "https://deno.land/std@0.200.0/http/server.ts";
 import { cors } from "https://deno.land/x/cors@v1.2.2/mod.ts";
 
 // Lock versions with import map (deno.json)
 {
-  "imports": {
+"imports": {
     "express": "npm:express@^4.18.2",
     "std/": "https://deno.land/std@0.200.0/"
   }
-}</code></pre>
-
-                      <h2>TypeScript Support: From Zero to Hero</h2>
-
-                      <p>
-                        If you're using TypeScript (and you should be), this comparison is crucial:
-                      </p>
-
-                      <div class="content-grid">
-                        <div class="row g-4">
-                          <div class="col-md-4">
-                            <div class="info-card">
-                              <h4>Node.js TypeScript Setup</h4>
-                              <pre><code class="language-bash"># 8 steps, multiple tools
-npm i -D typescript 
-npm i -D @types/node
-npm i -D ts-node
-npx tsc --init
-# Edit tsconfig.json
-# Setup build scripts
-# Configure nodemon
-# 😅 Ready after 15 minutes</code></pre>
-                            </div>
-                          </div>
-                          <div class="col-md-4">
-                            <div class="info-card">
-                              <h4>Bun TypeScript Setup</h4>
-                              <pre><code class="language-bash"># 1 step, works immediately
-bun init
-
-# That's it! 
-# TypeScript just works
-# No configuration needed
-# 🚀 Ready in 30 seconds</code></pre>
-                            </div>
-                          </div>
-                          <div class="col-md-4">
-                            <div class="info-card">
-                              <h4>Deno TypeScript Setup</h4>
-                              <pre><code class="language-bash"># 0 steps, built-in
-# Just write TypeScript
-# No configuration
-# No compilation step
-# ✨ Ready instantly</code></pre>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <h2>Real-World Example: Building an API</h2>
-
-                      <p>
-                        Let me show you the same REST API built with each runtime:
-                      </p>
-
-                      <h3>Node.js + Express (Traditional)</h3>
-                      <pre class="line-numbers"><code class="language-javascript">// server.js
-const express = require('express');
-const cors = require('cors');
-require('dotenv').config();
-
-const app = express();
-app.use(cors());
-app.use(express.json());
-
-// Simple CRUD API
-app.get('/api/users', async (req, res) => {
-  try {
-    // Simulate database call
-    const users = await getUsers();
-    res.json({ success: true, data: users });
-  } catch (error) {
-    res.status(500).json({ success: false, error: error.message });
-  }
-});
-
-app.post('/api/users', async (req, res) => {
-  try {
-    const user = await createUser(req.body);
-    res.status(201).json({ success: true, data: user });
-  } catch (error) {
-    res.status(400).json({ success: false, error: error.message });
-  }
-});
-
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});</code></pre>
-
-                      <h3>Bun (Node.js Compatible + Faster)</h3>
-                      <pre class="line-numbers"><code class="language-javascript">// server.ts - Same code, but runs on Bun
-import express from 'express';
-import cors from 'cors';
-
-const app = express();
-app.use(cors());
-app.use(express.json());
-
-// Same API code as Node.js
-app.get('/api/users', async (req, res) => {
-  try {
-    const users = await getUsers();
-    res.json({ success: true, data: users });
-  } catch (error) {
-    res.status(500).json({ success: false, error: error.message });
-  }
-});
-
-// Built-in performance improvements
-const server = app.listen(3000, () => {
-  console.log('🔥 Bun server running on port 3000');
-});
-
-// Run with: bun run server.ts
-// No compilation needed!</code></pre>
-
-                      <h3>Deno (Modern Web Standards)</h3>
-                      <pre class="line-numbers"><code class="language-typescript">// server.ts - Using native Deno APIs
-import { serve } from "https://deno.land/std@0.200.0/http/server.ts";
-
-interface User {
-  id: string;
-  name: string;
-  email: string;
 }
-
-async function handler(req: Request): Promise<Response> {
-  const url = new URL(req.url);
-  const method = req.method;
-
-  // CORS headers
-  const headers = new Headers({
-    "Content-Type": "application/json",
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
-    "Access-Control-Allow-Headers": "Content-Type",
-  });
-
-  if (method === "OPTIONS") {
-    return new Response(null, { headers });
-  }
-
-  try {
-    switch (`${method} ${url.pathname}`) {
-      case "GET /api/users": {
-        const users = await getUsers();
-        return Response.json({ success: true, data: users }, { headers });
-      }
-      
-      case "POST /api/users": {
-        const body = await req.json();
-        const user = await createUser(body);
-        return Response.json({ success: true, data: user }, { 
-          status: 201, 
-          headers 
-        });
-      }
-      
-      default:
-        return Response.json({ error: "Not found" }, { 
-          status: 404, 
-          headers 
-        });
-    }
-  } catch (error) {
-    return Response.json({ error: error.message }, { 
-      status: 500, 
-      headers 
-    });
-  }
-}
-
-// Run with: deno run --allow-net server.ts
-serve(handler, { port: 3000 });</code></pre>
+</code></pre>
 
                       <h2>Ecosystem and Library Support</h2>
 
                       <div class="table-responsive">
-                        <table class="table comparison-table table-bordered table-striped">
+                        <table
+                          class="table comparison-table table-bordered table-striped"
+                        >
                           <thead class="table-dark">
                             <tr>
                               <th style="width: 25%">Feature</th>
@@ -758,9 +638,21 @@ serve(handler, { port: 3000 });</code></pre>
                           <tbody>
                             <tr>
                               <td><strong>NPM Packages</strong></td>
-                              <td><span class="badge bg-success">2M+ packages</span></td>
-                              <td><span class="badge bg-success">95% compatible</span></td>
-                              <td><span class="badge bg-warning text-dark">60% via npm:</span></td>
+                              <td>
+                                <span class="badge bg-success"
+                                  >2M+ packages</span
+                                >
+                              </td>
+                              <td>
+                                <span class="badge bg-success"
+                                  >95% compatible</span
+                                >
+                              </td>
+                              <td>
+                                <span class="badge bg-warning text-dark"
+                                  >60% via npm:</span
+                                >
+                              </td>
                             </tr>
                             <tr>
                               <td><strong>Popular Libraries</strong></td>
@@ -802,11 +694,20 @@ serve(handler, { port: 3000 });</code></pre>
                             <div class="info-card">
                               <h4>🟡 Node.js Security</h4>
                               <ul>
-                                <li><strong>File Access:</strong> Full access</li>
+                                <li>
+                                  <strong>File Access:</strong> Full access
+                                </li>
                                 <li><strong>Network:</strong> Full access</li>
-                                <li><strong>Environment:</strong> Full access</li>
-                                <li><strong>Dependencies:</strong> Trust-based</li>
-                                <li><strong>Vulnerabilities:</strong> npm audit needed</li>
+                                <li>
+                                  <strong>Environment:</strong> Full access
+                                </li>
+                                <li>
+                                  <strong>Dependencies:</strong> Trust-based
+                                </li>
+                                <li>
+                                  <strong>Vulnerabilities:</strong> npm audit
+                                  needed
+                                </li>
                               </ul>
                             </div>
                           </div>
@@ -814,23 +715,39 @@ serve(handler, { port: 3000 });</code></pre>
                             <div class="info-card">
                               <h4>🟡 Bun Security</h4>
                               <ul>
-                                <li><strong>File Access:</strong> Full access</li>
+                                <li>
+                                  <strong>File Access:</strong> Full access
+                                </li>
                                 <li><strong>Network:</strong> Full access</li>
-                                <li><strong>Environment:</strong> Full access</li>
-                                <li><strong>Dependencies:</strong> Same as Node.js</li>
-                                <li><strong>Performance:</strong> Faster installs</li>
+                                <li>
+                                  <strong>Environment:</strong> Full access
+                                </li>
+                                <li>
+                                  <strong>Dependencies:</strong> Same as Node.js
+                                </li>
+                                <li>
+                                  <strong>Performance:</strong> Faster installs
+                                </li>
                               </ul>
                             </div>
                           </div>
                           <div class="col-md-4">
                             <div class="info-card">
-                              <h4>🟢 Deno Security</h4>
+                              <h4>Deno Security</h4>
                               <ul>
-                                <li><strong>File Access:</strong> --allow-read</li>
+                                <li>
+                                  <strong>File Access:</strong> --allow-read
+                                </li>
                                 <li><strong>Network:</strong> --allow-net</li>
-                                <li><strong>Environment:</strong> --allow-env</li>
-                                <li><strong>Dependencies:</strong> URL-based</li>
-                                <li><strong>Sandbox:</strong> Secure by default</li>
+                                <li>
+                                  <strong>Environment:</strong> --allow-env
+                                </li>
+                                <li>
+                                  <strong>Dependencies:</strong> URL-based
+                                </li>
+                                <li>
+                                  <strong>Sandbox:</strong> Secure by default
+                                </li>
                               </ul>
                             </div>
                           </div>
@@ -838,7 +755,9 @@ serve(handler, { port: 3000 });</code></pre>
                       </div>
 
                       <h3>Deno Security Example</h3>
-                      <pre class="line-numbers"><code class="language-bash"># Deno requires explicit permissions
+                      <pre
+                        class="line-numbers"
+                      ><code class="language-bash"># Deno requires explicit permissions
 deno run server.ts
 # ❌ Error: Requires network access
 
@@ -850,119 +769,133 @@ deno run --allow-net --allow-read=./config server.ts
 
 # Fine-grained control
 deno run \
-  --allow-net=api.example.com:443 \
-  --allow-read=./uploads \
-  --allow-env=NODE_ENV,PORT \
-  server.ts</code></pre>
+--allow-net=api.example.com:443 \
+--allow-read=./uploads \
+--allow-env=NODE_ENV,PORT \
+server.ts</code></pre>
 
-                      <h2>When to Choose What: My Real-World Recommendations</h2>
+                      <h2>
+                        When to Choose What: My Real-World Recommendations
+                      </h2>
 
                       <div class="content-grid">
                         <div class="row g-4">
-                          <div class="col-md-4">
+                          <div class="">
                             <div class="info-card">
-                              <h4>🟢 Choose Node.js When:</h4>
+                              <h4>Choose Node.js When:</h4>
                               <ul>
-                                <li><strong>Enterprise projects</strong> with established workflows</li>
-                                <li><strong>Large teams</strong> who know Node.js well</li>
-                                <li><strong>Complex dependencies</strong> that might not work elsewhere</li>
-                                <li><strong>Existing codebase</strong> migration risks</li>
-                                <li><strong>Long-term stability</strong> is priority #1</li>
+                                <li>
+                                  <strong>Enterprise projects</strong> with
+                                  established workflows
+                                </li>
+                                <li>
+                                  <strong>Large teams</strong> who know Node.js
+                                  well
+                                </li>
+                                <li>
+                                  <strong>Complex dependencies</strong> that
+                                  might not work elsewhere
+                                </li>
+                                <li>
+                                  <strong>Existing codebase</strong> migration
+                                  risks
+                                </li>
+                                <li>
+                                  <strong>Long-term stability</strong> is
+                                  priority #1
+                                </li>
                               </ul>
-                              <p><strong>Perfect for:</strong> E-commerce platforms, enterprise APIs, legacy system integration</p>
+                              <p>
+                                <strong>Perfect for:</strong> E-commerce
+                                platforms, enterprise APIs, legacy system
+                                integration
+                              </p>
                             </div>
                           </div>
-                          <div class="col-md-4">
+                          <div class="">
                             <div class="info-card">
-                              <h4>🔥 Choose Bun When:</h4>
+                              <h4>Choose Bun When:</h4>
                               <ul>
-                                <li><strong>Performance matters</strong> and you need speed</li>
-                                <li><strong>Modern JavaScript/TypeScript</strong> projects</li>
-                                <li><strong>Fast development cycles</strong> with hot reload</li>
-                                <li><strong>Migrating from Node.js</strong> with minimal changes</li>
-                                <li><strong>Package installation</strong> is a bottleneck</li>
+                                <li>
+                                  <strong>Performance matters</strong> and you
+                                  need speed
+                                </li>
+                                <li>
+                                  <strong>Modern JavaScript/TypeScript</strong>
+                                  projects
+                                </li>
+                                <li>
+                                  <strong>Fast development cycles</strong> with
+                                  hot reload
+                                </li>
+                                <li>
+                                  <strong>Migrating from Node.js</strong> with
+                                  minimal changes
+                                </li>
+                                <li>
+                                  <strong>Package installation</strong> is a
+                                  bottleneck
+                                </li>
                               </ul>
-                              <p><strong>Perfect for:</strong> APIs, microservices, development tooling, real-time applications</p>
+                              <p>
+                                <strong>Perfect for:</strong> APIs,
+                                microservices, development tooling, real-time
+                                applications
+                              </p>
                             </div>
                           </div>
-                          <div class="col-md-4">
+                          <div class="">
                             <div class="info-card">
-                              <h4>🦕 Choose Deno When:</h4>
+                              <h4>Choose Deno When:</h4>
                               <ul>
-                                <li><strong>Security is critical</strong> (fintech, healthcare)</li>
-                                <li><strong>TypeScript-first</strong> development</li>
-                                <li><strong>Modern web standards</strong> matter</li>
-                                <li><strong>Simplicity over ecosystem</strong></li>
-                                <li><strong>Edge computing</strong> deployments</li>
+                                <li>
+                                  <strong>Security is critical</strong>
+                                  (fintech, healthcare)
+                                </li>
+                                <li>
+                                  <strong>TypeScript-first</strong> development
+                                </li>
+                                <li>
+                                  <strong>Modern web standards</strong> matter
+                                </li>
+                                <li>
+                                  <strong>Simplicity over ecosystem</strong>
+                                </li>
+                                <li>
+                                  <strong>Edge computing</strong> deployments
+                                </li>
                               </ul>
-                              <p><strong>Perfect for:</strong> Serverless functions, secure APIs, modern web apps, CLI tools</p>
+                              <p>
+                                <strong>Perfect for:</strong> Serverless
+                                functions, secure APIs, modern web apps, CLI
+                                tools
+                              </p>
                             </div>
                           </div>
                         </div>
                       </div>
 
-                      <h2>My Production Experience</h2>
-
-                      <p>
-                        Here's what I learned from actually deploying these in production:
-                      </p>
-
-                      <h3>Node.js (Main API - 50k daily users)</h3>
-                      <pre class="line-numbers"><code class="language-javascript">// What worked well:
-✅ Rock-solid stability
-✅ Huge community support  
-✅ Extensive monitoring tools
-✅ Team familiarity
-
-// Pain points:
-❌ Slow cold starts
-❌ npm dependency hell
-❌ TypeScript setup complexity
-❌ Memory usage can be high</code></pre>
-
-                      <h3>Bun (Microservice - 10k requests/min)</h3>
-                      <pre class="line-numbers"><code class="language-javascript">// What worked well:
-✅ 2x faster than Node.js
-✅ Instant TypeScript support
-✅ Lightning-fast package installs
-✅ Drop-in replacement for most code
-
-// Pain points:
-❌ Some npm packages don't work
-❌ Smaller community
-❌ Documentation gaps
-❌ New, less battle-tested</code></pre>
-
-                      <h3>Deno (Edge Functions - Serverless)</h3>
-                      <pre class="line-numbers"><code class="language-javascript">// What worked well:
-✅ Zero-config TypeScript
-✅ Excellent security model
-✅ Modern APIs out of the box
-✅ Great for serverless/edge
-
-// Pain points:
-❌ Limited ecosystem
-❌ Learning curve for imports
-❌ Some performance overhead
-❌ Less tooling integration</code></pre>
-
                       <blockquote>
                         <p>
-                          "The best JavaScript runtime is the one that gets your project shipped. Node.js for stability, Bun for speed, Deno for security and simplicity."
+                          "The best JavaScript runtime is the one that gets your
+                          project shipped. Node.js for stability, Bun for speed,
+                          Deno for security and simplicity."
                         </p>
                       </blockquote>
 
                       <h2>Quick Decision Framework</h2>
 
                       <div class="highlight-box">
-                        <h3>🚀 The 30-Second Decision Tree</h3>
+                        <h3>The 30-Second Decision Tree</h3>
 
                         <div class="content-grid">
                           <div class="row g-3">
                             <div class="col-md-4">
                               <div class="info-card">
                                 <h4>Are you building for production?</h4>
-                                <p><strong>Yes:</strong> Node.js (safe choice)</p>
+                                <p>
+                                  <strong>Yes:</strong> Node.js (safe choice)
+                                </p>
                                 <p><strong>No:</strong> Try Bun or Deno</p>
                               </div>
                             </div>
@@ -987,24 +920,36 @@ deno run \
                       <h2>The Bottom Line</h2>
 
                       <p>
-                        After months of testing, here's my honest recommendation:
+                        After months of testing, here's my honest
+                        recommendation:
                       </p>
 
                       <ul>
-                        <li><strong>Starting a new project?</strong> Try Bun. It's Node.js but faster, with better TypeScript support.</li>
-                        <li><strong>Building something secure?</strong> Go with Deno. The security model alone is worth it.</li>
-                        <li><strong>Working on existing code?</strong> Stick with Node.js unless performance is a real problem.</li>
-                        <li><strong>Just learning?</strong> Pick any and focus on JavaScript fundamentals first.</li>
+                        <li>
+                          <strong>Starting a new project?</strong> Try Bun. It's
+                          Node.js but faster, with better TypeScript support.
+                        </li>
+                        <li>
+                          <strong>Building something secure?</strong> Go with
+                          Deno. The security model alone is worth it.
+                        </li>
+                        <li>
+                          <strong>Working on existing code?</strong> Stick with
+                          Node.js unless performance is a real problem.
+                        </li>
+                        <li>
+                          <strong>Just learning?</strong> Pick any and focus on
+                          JavaScript fundamentals first.
+                        </li>
                       </ul>
-
-                      <p>
-                        <strong>Final thought:</strong> The JavaScript runtime war isn't really a war – it's an evolution. We're getting better tools, and that benefits everyone. Pick the one that fits your project, not the one with the most hype.
-                      </p>
 
                       <div class="highlight-box">
                         <h3>🎯 My 2025 Recommendation</h3>
                         <p>
-                          Try <strong>Bun</strong> for your next side project. It's the easiest way to experience the future of JavaScript development while keeping most of your Node.js knowledge relevant.
+                          Try <strong>Bun</strong> for your next side project.
+                          It's the easiest way to experience the future of
+                          JavaScript development while keeping most of your
+                          Node.js knowledge relevant.
                         </p>
                       </div>
                     </div>

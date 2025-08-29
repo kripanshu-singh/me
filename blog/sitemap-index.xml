@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main blog sitemap -->
+  <sitemap>
+    <loc>https://www.kripanshu.me/blog/sitemap.xml</loc>
+    <lastmod>2025-08-29</lastmod>
+  </sitemap>
+  
+  <!-- Individual post sitemaps (for future scaling) -->
+  <sitemap>
+    <loc>https://www.kripanshu.me/blog/posts-sitemap.xml</loc>
+    <lastmod>2025-08-29</lastmod>
+  </sitemap>
+</sitemapindex>

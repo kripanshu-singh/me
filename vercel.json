@@ -94,6 +94,14 @@
     {
       "source": "/blog/posts/my-first-oauth-integration/",
       "destination": "/blog/posts/my-first-oauth-integration/index.html"
+    },
+    {
+      "source": "/blog/posts/node-bun-deno",
+      "destination": "/blog/posts/node-bun-deno/index.html"
+    },
+    {
+      "source": "/blog/posts/node-bun-deno/",
+      "destination": "/blog/posts/node-bun-deno/index.html"
     }
   ]
 }

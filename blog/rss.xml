@@ -8,13 +8,32 @@
     <language>en-US</language>
     <managingEditor>kripanshusingh160305@gmail.com (Kripanshu Singh)</managingEditor>
     <webMaster>kripanshusingh160305@gmail.com (Kripanshu Singh)</webMaster>
-    <lastBuildDate>Sat, 24 Aug 2025 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 29 Aug 2025 00:00:00 GMT</lastBuildDate>
     <category>Software Development</category>
+    <category>JavaScript</category>
     <category>Authentication</category>
     <category>API Security</category>
     <ttl>60</ttl>
     
-    <!-- Latest Post: OAuth 2.0 Integration Guide -->
+    <!-- Latest Post: Node.js vs Bun vs Deno Comparison -->
+    <item>
+      <title><![CDATA[Node.js vs Bun vs Deno: The Ultimate JavaScript Runtime Comparison]]></title>
+      <description><![CDATA[Complete comparison of Node.js vs Bun vs Deno JavaScript runtimes. Performance benchmarks, features, package management, TypeScript support, and real-world usage recommendations from production experience. Learn which runtime to choose for your next project.]]></description>
+      <link>https://www.kripanshu.me/blog/posts/node-bun-deno/</link>
+      <guid isPermaLink="true">https://www.kripanshu.me/blog/posts/node-bun-deno/</guid>
+      <pubDate>Thu, 29 Aug 2025 00:00:00 GMT</pubDate>
+      <category><![CDATA[JavaScript]]></category>
+      <category><![CDATA[Node.js]]></category>
+      <category><![CDATA[Bun]]></category>
+      <category><![CDATA[Deno]]></category>
+      <category><![CDATA[Performance]]></category>
+      <category><![CDATA[TypeScript]]></category>
+      <category><![CDATA[Backend Development]]></category>
+      <author>kripanshusingh160305@gmail.com (Kripanshu Singh)</author>
+      <enclosure url="https://www.kripanshu.me/blog/posts/node-bun-deno/assets/node_bun_deno.png" length="0" type="image/png"/>
+    </item>
+    
+    <!-- OAuth 2.0 Integration Guide -->
     <item>
       <title><![CDATA[My First OAuth 2.0 Integration: From Zero to Production]]></title>
       <description><![CDATA[Complete guide comparing OAuth 2.0 vs JWT vs Sessions vs API Keys vs Basic Auth vs SAML. Learn Authorization vs Authentication differences, detailed comparison tables with implementation times, security levels, and real-world production experience from $1M+ ad spend system.]]></description>

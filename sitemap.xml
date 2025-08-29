@@ -53,12 +53,24 @@
   <!-- Blog Hub Page -->
   <url>
     <loc>https://www.kripanshu.me/blog/</loc>
-    <lastmod>2025-08-22</lastmod>
+    <lastmod>2025-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <!-- Blog Posts (Spokes) -->
+  <url>
+    <loc>https://www.kripanshu.me/blog/posts/node-bun-deno/</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.kripanshu.me/blog/posts/node-bun-deno/assets/node_bun_deno.png</image:loc>
+      <image:title>Node.js vs Bun vs Deno: The Ultimate JavaScript Runtime Comparison</image:title>
+      <image:caption>Complete comparison of Node.js, Bun, and Deno JavaScript runtimes with performance benchmarks, features analysis, and real-world usage recommendations</image:caption>
+    </image:image>
+  </url>
+  
   <url>
     <loc>https://www.kripanshu.me/blog/posts/jwt-vs-sessions/</loc>
     <lastmod>2025-08-22</lastmod>

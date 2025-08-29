@@ -33,6 +33,28 @@
     </news:news>
   </url>
   
+  <!-- Node.js vs Bun vs Deno Guide -->
+  <url>
+    <loc>https://www.kripanshu.me/blog/posts/node-bun-deno/</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.kripanshu.me/blog/posts/node-bun-deno/assets/node_bun_deno.png</image:loc>
+      <image:title>Node.js vs Bun vs Deno: The Ultimate JavaScript Runtime Comparison</image:title>
+      <image:caption>Complete comparison of Node.js, Bun, and Deno JavaScript runtimes with performance benchmarks, features analysis, and real-world usage recommendations</image:caption>
+    </image:image>
+    <news:news>
+      <news:publication>
+        <news:name>Kripanshu Singh Blog</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-08-29</news:publication_date>
+      <news:title>Node.js vs Bun vs Deno: The Ultimate JavaScript Runtime Comparison</news:title>
+      <news:keywords>Node.js, Bun, Deno, JavaScript Runtime, Performance Comparison, TypeScript, Package Management, Backend Development</news:keywords>
+    </news:news>
+  </url>
+
   <!-- JWT vs Sessions Guide -->
   <url>
     <loc>https://www.kripanshu.me/blog/posts/jwt-vs-sessions/</loc>

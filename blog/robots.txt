@@ -1,0 +1,31 @@
+User-agent: *
+Allow: /
+
+# Blog specific directives
+Allow: /blog/
+Allow: /blog/posts/
+Allow: /blog/posts/*/
+Allow: /blog/assets/
+
+# Sitemap locations
+Sitemap: https://www.kripanshu.me/sitemap.xml
+Sitemap: https://www.kripanshu.me/blog/sitemap.xml
+
+# Crawl delay for better server performance
+Crawl-delay: 1
+
+# Allow crawling of specific blog post directories
+Allow: /blog/posts/node-bun-deno/
+Allow: /blog/posts/jwt-vs-sessions/
+Allow: /blog/posts/my-first-oauth-integration/
+
+# Block any unnecessary files
+Disallow: /blog/assets/vendor/
+Disallow: /blog/assets/scss/
+Disallow: *.txt
+Disallow: *.log
+
+# Clean URLs - redirect crawlers to proper paths
+# /blog/posts/node-bun-deno -> /blog/posts/node-bun-deno/
+# /blog/posts/jwt-vs-sessions -> /blog/posts/jwt-vs-sessions/
+# /blog/posts/my-first-oauth-integration -> /blog/posts/my-first-oauth-integration/
