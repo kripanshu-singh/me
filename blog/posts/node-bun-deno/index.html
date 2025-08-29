@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <!-- Enhanced SEO Title -->
+    <title>
+      Node.js vs Bun vs Deno: The Ultimate JavaScript Runtime Comparison 2025 | Kripanshu Singh
+    </title>
+
+    <!-- Enhanced Meta Description -->
+    <meta
+      name="description"
+      content="Complete comparison of Node.js vs Bun vs Deno JavaScript runtimes. Performance benchmarks, features, package management, TypeScript support, and real-world usage recommendations from a Software Engineer with production experience."
+    />
+
+    <!-- Enhanced Keywords -->
+    <meta
+      name="keywords"
+      content="Node.js vs Bun vs Deno, JavaScript runtime comparison, Bun performance, Deno TypeScript, Node.js alternatives, JavaScript runtimes 2025, Server-side JavaScript, Backend development, Kripanshu Singh, Software Engineer, Performance benchmarks, Package management, npm vs pnpm vs deno"
+    />
+
+    <!-- Author and Publication Info -->
+    <meta name="author" content="Kripanshu Singh" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <link
+      rel="canonical"
+      href="https://www.kripanshu.me/blog/posts/node-bun-deno/"
+    />
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="article:published_time" content="2025-08-29T00:00:00Z" />
+    <meta name="article:modified_time" content="2025-08-29T00:00:00Z" />
+    <meta name="article:author" content="Kripanshu Singh" />
+    <meta name="article:section" content="Web Development" />
+    <meta name="article:tag" content="Node.js" />
+    <meta name="article:tag" content="Bun" />
+    <meta name="article:tag" content="Deno" />
+    <meta name="article:tag" content="JavaScript" />
+    <meta name="article:tag" content="Runtime" />
+    <meta name="article:tag" content="Performance" />
+    <meta name="dc.language" content="en-US" />
+    <meta
+      name="dc.title"
+      content="Node.js vs Bun vs Deno: The Ultimate JavaScript Runtime Comparison"
+    />
+    <meta name="dc.creator" content="Kripanshu Singh" />
+    <meta
+      name="dc.subject"
+      content="JavaScript Runtimes, Node.js, Bun, Deno, Performance"
+    />
+    <meta
+      name="dc.description"
+      content="Complete comparison of JavaScript runtimes with performance benchmarks, features, and real-world usage recommendations."
+    />
+
+    <!-- Open Graph Tags for Social Media -->
+    <meta
+      property="og:title"
+      content="Node.js vs Bun vs Deno: The Ultimate JavaScript Runtime Comparison"
+    />
+    <meta
+      property="og:description"
+      content="Complete guide comparing Node.js, Bun, and Deno JavaScript runtimes. Performance benchmarks, features comparison, and real-world usage recommendations from production experience."
+    />
+    <meta
+      property="og:image"
+      content="https://www.kripanshu.me/blog/posts/node-bun-deno/assets/node_bun_deno.png"
+    />
+    <meta
+      property="og:url"
+      content="https://www.kripanshu.me/blog/posts/node-bun-deno/"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:site_name"
+      content="Kripanshu Singh - Software Engineer Blog"
+    />
+    <meta property="article:author" content="Kripanshu Singh" />
+    <meta property="article:published_time" content="2025-08-29T00:00:00Z" />
+    <meta property="article:modified_time" content="2025-08-29T00:00:00Z" />
+    <meta property="article:section" content="Web Development" />
+    <meta property="article:tag" content="Node.js" />
+    <meta property="article:tag" content="Bun" />
+    <meta property="article:tag" content="Deno" />
+    <meta property="article:tag" content="JavaScript Runtime" />
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Node.js vs Bun vs Deno: The Ultimate JavaScript Runtime Comparison"
+    />
+    <meta
+      name="twitter:description"
+      content="Complete guide: Node.js vs Bun vs Deno JavaScript runtimes. Performance benchmarks, features comparison, and real-world usage recommendations from production experience."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.kripanshu.me/blog/posts/node-bun-deno/assets/node_bun_deno.png"
+    />
+    <meta name="twitter:creator" content="@kripanshu_singh" />
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Node.js vs Bun vs Deno: The Ultimate JavaScript Runtime Comparison",
+        "description": "Complete comparison of Node.js vs Bun vs Deno JavaScript runtimes. Performance benchmarks, features, package management, TypeScript support, and real-world usage recommendations from production experience.",
+        "image": "https://www.kripanshu.me/blog/posts/node-bun-deno/assets/node_bun_deno.png",
+        "author": {
+          "@type": "Person",
+          "name": "Kripanshu Singh",
+          "url": "https://www.kripanshu.me/",
+          "jobTitle": "Software Engineer",
+          "description": "Software Engineer specializing in backend systems and full-stack applications with experience at Aarogya ID and Messold Technologies"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Kripanshu Singh",
+          "url": "https://www.kripanshu.me/"
+        },
+        "datePublished": "2025-08-29",
+        "dateModified": "2025-08-29",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.kripanshu.me/blog/posts/node-bun-deno/"
+        },
+        "keywords": [
+          "Node.js",
+          "Bun",
+          "Deno",
+          "JavaScript Runtime",
+          "Performance Comparison",
+          "TypeScript",
+          "Package Management",
+          "Backend Development",
+          "Server-side JavaScript",
+          "Software Engineering"
+        ],
+        "wordCount": 4000,
+        "articleSection": "Web Development",
+        "inLanguage": "en-US"
+      }
+    </script>
+
+    <!-- FAQ Structured Data for Better SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Should I switch from Node.js to Bun or Deno?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It depends on your project needs. Stick with Node.js for production apps with extensive npm dependencies. Try Bun for new projects where performance matters and you want faster package management. Consider Deno for TypeScript-first projects or when you need built-in security and modern APIs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which JavaScript runtime is fastest - Node.js, Bun, or Deno?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Bun is generally the fastest for most operations, being 2-4x faster than Node.js in many benchmarks. Deno performance is comparable to Node.js but slightly slower in some cases. However, real-world performance depends on your specific use case and the libraries you use."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Bun work with existing Node.js packages?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, Bun has excellent Node.js compatibility and works with most npm packages out of the box. It can run Node.js applications with minimal changes and provides faster package installation than npm or yarn."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the main advantages of Deno over Node.js?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Deno offers built-in TypeScript support, secure-by-default architecture, no package.json dependency, modern ES modules, built-in testing and formatting tools, and a standard library that doesn't require external packages for common tasks."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <!-- Breadcrumb Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.kripanshu.me/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://www.kripanshu.me/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Node.js vs Bun vs Deno Comparison",
+            "item": "https://www.kripanshu.me/blog/posts/node-bun-deno/"
+          }
+        ]
+      }
+    </script>
+
+    <!-- Enhanced Favicons for Better Search Results -->
+    <link rel="icon" type="image/png" href="../../../icon.png" />
+    <link rel="icon" type="image/png" href="../../../assets/img/favicon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../../../assets/img/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="../../../site.webmanifest" />
+    <meta name="theme-color" content="#0563bb" />
+
+    <!-- Performance and SEO Optimizations -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="msapplication-TileColor" content="#0563bb" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="../../assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../../../assets/vendor/boxicons/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="../../assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="../../assets/vendor/swiper/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../../assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS Files -->
+    <link href="../../assets/css/main.css" rel="stylesheet" />
+    <link href="../../../assets/css/style.css" rel="stylesheet" />
+    <link href="../../assets/css/blog-post.css" rel="stylesheet" />
+
+    <!-- Prism.js CSS for syntax highlighting -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="blog-details-page">
+    <!-- ======= Mobile nav toggle button ======= -->
+    <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex flex-column justify-content-center">
+      <nav id="navbar" class="navbar nav-menu">
+        <ul>
+          <li>
+            <a href="../../../index.html" class="nav-link"
+              ><i class="bx bx-home"></i> <span>Home</span></a
+            >
+          </li>
+          <li>
+            <a href="../../../index.html#about" class="nav-link"
+              ><i class="bx bx-user"></i> <span>About</span></a
+            >
+          </li>
+          <li>
+            <a href="../../../index.html#resume" class="nav-link"
+              ><i class="bx bx-file-blank"></i> <span>Resume</span></a
+            >
+          </li>
+          <li>
+            <a href="../../../index.html#projects" class="nav-link"
+              ><i class="bx bx-book-content"></i> <span>Projects</span></a
+            >
+          </li>
+          <li>
+            <a href="../../index.html" class="nav-link active"
+              ><i class="bx bx-pencil"></i> <span>Blog</span></a
+            >
+          </li>
+          <li>
+            <a href="../../../index.html#contact" class="nav-link"
+              ><i class="bx bx-envelope"></i> <span>Contact</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <div class="row">
+          <div class="">
+            <!-- Blog Details Section -->
+            <section id="blog-details" class="blog-details section">
+              <div class="container">
+                <article class="article">
+                  <div class="hero-img" data-aos="fade-up">
+                    <img
+                      src="assets/node_bun_deno.png"
+                      alt="Node.js vs Bun vs Deno Comparison Guide"
+                      class="img-fluid"
+                      loading="lazy"
+                    />
+                    <div class="meta-overlay">
+                      <div class="meta-categories">
+                        <a class="category">JavaScript</a>
+                        <span class="divider">•</span>
+                        <span class="reading-time"
+                          ><i class="bi bi-clock"></i> 8 min read</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="article-content"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <div class="content-header">
+                      <h1 class="title">
+                        Node.js vs Bun vs Deno: The Ultimate JavaScript Runtime Comparison
+                      </h1>
+
+                      <div class="author-info">
+                        <div class="author-details">
+                          <img
+                            src="../../../assets/img/profile-img4.jpg"
+                            alt="Kripanshu Singh"
+                            class="author-img"
+                          />
+                          <div class="info">
+                            <h4>Kripanshu Singh</h4>
+                            <span class="role">Full Stack Developer</span>
+                          </div>
+                        </div>
+                        <div class="post-meta">
+                          <span class="date"
+                            ><i class="bi bi-calendar3"></i> Aug 29, 2025</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="content">
+                      <p class="lead">
+                        <strong
+                          >"Should I stick with Node.js, try the new blazing-fast Bun, or give Deno a shot?"</strong
+                        >
+                      </p>
+
+                      <p>
+                        If you're a JavaScript developer in 2025, you've probably heard this debate everywhere. Three months ago, I was in the same boat – comfortable with Node.js but curious about these newer runtimes that everyone's talking about.
+                      </p>
+
+                      <p>
+                        <strong>Spoiler alert:</strong> I ended up testing all three in production. Here's what I learned, and more importantly, which one you should choose for your next project.
+                      </p>
+
+                      <h2>The JavaScript Runtime Landscape in 2025</h2>
+
+                      <p>
+                        Let me set the stage. We're not just comparing apples to apples here – each runtime has a different philosophy:
+                      </p>
+
+                      <div class="content-grid">
+                        <div class="row g-4">
+                          <div class="col-md-4">
+                            <div class="info-card">
+                              <h4>🟢 Node.js: The Veteran</h4>
+                              <ul>
+                                <li><strong>Born:</strong> 2009</li>
+                                <li><strong>Philosophy:</strong> "JavaScript everywhere"</li>
+                                <li><strong>Strength:</strong> Massive ecosystem</li>
+                                <li><strong>Engine:</strong> V8 (Chrome)</li>
+                                <li><strong>Community:</strong> Huge, mature</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="info-card">
+                              <h4>🔥 Bun: The Speed Demon</h4>
+                              <ul>
+                                <li><strong>Born:</strong> 2022</li>
+                                <li><strong>Philosophy:</strong> "Fast by default"</li>
+                                <li><strong>Strength:</strong> Performance</li>
+                                <li><strong>Engine:</strong> JavaScriptCore (Safari)</li>
+                                <li><strong>Community:</strong> Growing rapidly</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="info-card">
+                              <h4>🦕 Deno: The Security-First</h4>
+                              <ul>
+                                <li><strong>Born:</strong> 2018</li>
+                                <li><strong>Philosophy:</strong> "Secure by default"</li>
+                                <li><strong>Strength:</strong> Modern standards</li>
+                                <li><strong>Engine:</strong> V8 (Chrome)</li>
+                                <li><strong>Community:</strong> Quality over quantity</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <h2>Performance: The Numbers Don't Lie</h2>
+
+                      <p>
+                        Let's talk about what everyone wants to know – speed. I ran the same Express-like server on all three runtimes:
+                      </p>
+
+                      <h3>Simple HTTP Server Benchmark</h3>
+                      <pre class="line-numbers"><code class="language-javascript">// Simple server test - same logic across all runtimes
+const server = require('http').createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'application/json' });
+  res.end(JSON.stringify({ 
+    message: 'Hello World',
+    timestamp: Date.now(),
+    runtime: process.version || Deno.version || Bun.version
+  }));
+});
+
+server.listen(3000);
+
+// Benchmark: 10k concurrent requests, 30 seconds
+// Tool: wrk -t12 -c400 -d30s http://localhost:3000</code></pre>
+
+                      <div class="table-responsive">
+                        <table class="table table-striped table-bordered">
+                          <thead class="table-dark">
+                            <tr>
+                              <th>Runtime</th>
+                              <th>Requests/sec</th>
+                              <th>Latency (avg)</th>
+                              <th>Memory Usage</th>
+                              <th>Startup Time</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><strong>Bun 1.0.2</strong></td>
+                              <td><span class="badge bg-success">89,432</span></td>
+                              <td>4.2ms</td>
+                              <td>28MB</td>
+                              <td>0.12s</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Node.js 20.5</strong></td>
+                              <td><span class="badge bg-warning text-dark">41,203</span></td>
+                              <td>9.1ms</td>
+                              <td>45MB</td>
+                              <td>0.34s</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Deno 1.36</strong></td>
+                              <td><span class="badge bg-info">38,756</span></td>
+                              <td>9.8ms</td>
+                              <td>52MB</td>
+                              <td>0.28s</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+
+                      <div class="highlight-box">
+                        <h3>🚀 Performance Winner: Bun</h3>
+                        <p>
+                          Bun is <strong>2-3x faster</strong> than Node.js and Deno in HTTP throughput. 
+                          But here's the catch – these are synthetic benchmarks. Real-world performance depends heavily on your use case.
+                        </p>
+                      </div>
+
+                      <h2>Package Management: A Tale of Three Approaches</h2>
+
+                      <p>
+                        This is where things get really interesting. Each runtime has a completely different philosophy:
+                      </p>
+
+                      <h3>Node.js: The npm Ecosystem</h3>
+                      <pre class="line-numbers"><code class="language-bash"># Traditional Node.js approach
+npm init -y
+npm install express cors dotenv
+npm install -D nodemon typescript @types/node
+
+# package.json dependency hell
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "typescript": "^5.1.6",
+    "@types/node": "^20.5.0"
+  }
+}</code></pre>
+
+                      <h3>Bun: Supercharged Package Management</h3>
+                      <pre class="line-numbers"><code class="language-bash"># Bun - Same packages, way faster
+bun init
+bun add express cors dotenv
+bun add -d nodemon typescript @types/node
+
+# Speed comparison (installing express + 20 dependencies):
+# npm:  12.3 seconds
+# yarn: 8.7 seconds  
+# pnpm: 6.2 seconds
+# bun:  1.4 seconds ⚡</code></pre>
+
+                      <h3>Deno: No Package Manager Needed</h3>
+                      <pre class="line-numbers"><code class="language-javascript">// Deno - Direct imports, no package.json
+import { serve } from "https://deno.land/std@0.200.0/http/server.ts";
+import { cors } from "https://deno.land/x/cors@v1.2.2/mod.ts";
+
+// Lock versions with import map (deno.json)
+{
+  "imports": {
+    "express": "npm:express@^4.18.2",
+    "std/": "https://deno.land/std@0.200.0/"
+  }
+}</code></pre>
+
+                      <h2>TypeScript Support: From Zero to Hero</h2>
+
+                      <p>
+                        If you're using TypeScript (and you should be), this comparison is crucial:
+                      </p>
+
+                      <div class="content-grid">
+                        <div class="row g-4">
+                          <div class="col-md-4">
+                            <div class="info-card">
+                              <h4>Node.js TypeScript Setup</h4>
+                              <pre><code class="language-bash"># 8 steps, multiple tools
+npm i -D typescript 
+npm i -D @types/node
+npm i -D ts-node
+npx tsc --init
+# Edit tsconfig.json
+# Setup build scripts
+# Configure nodemon
+# 😅 Ready after 15 minutes</code></pre>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="info-card">
+                              <h4>Bun TypeScript Setup</h4>
+                              <pre><code class="language-bash"># 1 step, works immediately
+bun init
+
+# That's it! 
+# TypeScript just works
+# No configuration needed
+# 🚀 Ready in 30 seconds</code></pre>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="info-card">
+                              <h4>Deno TypeScript Setup</h4>
+                              <pre><code class="language-bash"># 0 steps, built-in
+# Just write TypeScript
+# No configuration
+# No compilation step
+# ✨ Ready instantly</code></pre>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <h2>Real-World Example: Building an API</h2>
+
+                      <p>
+                        Let me show you the same REST API built with each runtime:
+                      </p>
+
+                      <h3>Node.js + Express (Traditional)</h3>
+                      <pre class="line-numbers"><code class="language-javascript">// server.js
+const express = require('express');
+const cors = require('cors');
+require('dotenv').config();
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+// Simple CRUD API
+app.get('/api/users', async (req, res) => {
+  try {
+    // Simulate database call
+    const users = await getUsers();
+    res.json({ success: true, data: users });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+app.post('/api/users', async (req, res) => {
+  try {
+    const user = await createUser(req.body);
+    res.status(201).json({ success: true, data: user });
+  } catch (error) {
+    res.status(400).json({ success: false, error: error.message });
+  }
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});</code></pre>
+
+                      <h3>Bun (Node.js Compatible + Faster)</h3>
+                      <pre class="line-numbers"><code class="language-javascript">// server.ts - Same code, but runs on Bun
+import express from 'express';
+import cors from 'cors';
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+// Same API code as Node.js
+app.get('/api/users', async (req, res) => {
+  try {
+    const users = await getUsers();
+    res.json({ success: true, data: users });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// Built-in performance improvements
+const server = app.listen(3000, () => {
+  console.log('🔥 Bun server running on port 3000');
+});
+
+// Run with: bun run server.ts
+// No compilation needed!</code></pre>
+
+                      <h3>Deno (Modern Web Standards)</h3>
+                      <pre class="line-numbers"><code class="language-typescript">// server.ts - Using native Deno APIs
+import { serve } from "https://deno.land/std@0.200.0/http/server.ts";
+
+interface User {
+  id: string;
+  name: string;
+  email: string;
+}
+
+async function handler(req: Request): Promise<Response> {
+  const url = new URL(req.url);
+  const method = req.method;
+
+  // CORS headers
+  const headers = new Headers({
+    "Content-Type": "application/json",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+    "Access-Control-Allow-Headers": "Content-Type",
+  });
+
+  if (method === "OPTIONS") {
+    return new Response(null, { headers });
+  }
+
+  try {
+    switch (`${method} ${url.pathname}`) {
+      case "GET /api/users": {
+        const users = await getUsers();
+        return Response.json({ success: true, data: users }, { headers });
+      }
+      
+      case "POST /api/users": {
+        const body = await req.json();
+        const user = await createUser(body);
+        return Response.json({ success: true, data: user }, { 
+          status: 201, 
+          headers 
+        });
+      }
+      
+      default:
+        return Response.json({ error: "Not found" }, { 
+          status: 404, 
+          headers 
+        });
+    }
+  } catch (error) {
+    return Response.json({ error: error.message }, { 
+      status: 500, 
+      headers 
+    });
+  }
+}
+
+// Run with: deno run --allow-net server.ts
+serve(handler, { port: 3000 });</code></pre>
+
+                      <h2>Ecosystem and Library Support</h2>
+
+                      <div class="table-responsive">
+                        <table class="table comparison-table table-bordered table-striped">
+                          <thead class="table-dark">
+                            <tr>
+                              <th style="width: 25%">Feature</th>
+                              <th style="width: 25%">Node.js</th>
+                              <th style="width: 25%">Bun</th>
+                              <th style="width: 25%">Deno</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><strong>NPM Packages</strong></td>
+                              <td><span class="badge bg-success">2M+ packages</span></td>
+                              <td><span class="badge bg-success">95% compatible</span></td>
+                              <td><span class="badge bg-warning text-dark">60% via npm:</span></td>
+                            </tr>
+                            <tr>
+                              <td><strong>Popular Libraries</strong></td>
+                              <td>✅ Express, React, Vue, etc.</td>
+                              <td>✅ Most Node.js libs work</td>
+                              <td>⚠️ Growing ecosystem</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Database ORMs</strong></td>
+                              <td>✅ Prisma, TypeORM, Sequelize</td>
+                              <td>✅ Same as Node.js</td>
+                              <td>✅ Prisma, Drizzle, Fresh</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Testing Frameworks</strong></td>
+                              <td>Jest, Mocha, Vitest</td>
+                              <td>Built-in + Jest compatibility</td>
+                              <td>Built-in testing</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Built-in Tools</strong></td>
+                              <td>❌ None</td>
+                              <td>✅ Bundler, Test runner</td>
+                              <td>✅ Formatter, Linter, Test</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+
+                      <h2>Security: A Modern Concern</h2>
+
+                      <p>
+                        Here's where Deno really shines, and Bun follows suit:
+                      </p>
+
+                      <div class="content-grid">
+                        <div class="row g-4">
+                          <div class="col-md-4">
+                            <div class="info-card">
+                              <h4>🟡 Node.js Security</h4>
+                              <ul>
+                                <li><strong>File Access:</strong> Full access</li>
+                                <li><strong>Network:</strong> Full access</li>
+                                <li><strong>Environment:</strong> Full access</li>
+                                <li><strong>Dependencies:</strong> Trust-based</li>
+                                <li><strong>Vulnerabilities:</strong> npm audit needed</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="info-card">
+                              <h4>🟡 Bun Security</h4>
+                              <ul>
+                                <li><strong>File Access:</strong> Full access</li>
+                                <li><strong>Network:</strong> Full access</li>
+                                <li><strong>Environment:</strong> Full access</li>
+                                <li><strong>Dependencies:</strong> Same as Node.js</li>
+                                <li><strong>Performance:</strong> Faster installs</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="info-card">
+                              <h4>🟢 Deno Security</h4>
+                              <ul>
+                                <li><strong>File Access:</strong> --allow-read</li>
+                                <li><strong>Network:</strong> --allow-net</li>
+                                <li><strong>Environment:</strong> --allow-env</li>
+                                <li><strong>Dependencies:</strong> URL-based</li>
+                                <li><strong>Sandbox:</strong> Secure by default</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <h3>Deno Security Example</h3>
+                      <pre class="line-numbers"><code class="language-bash"># Deno requires explicit permissions
+deno run server.ts
+# ❌ Error: Requires network access
+
+deno run --allow-net server.ts  
+# ✅ Can make network requests
+
+deno run --allow-net --allow-read=./config server.ts
+# ✅ Network + read ./config directory only
+
+# Fine-grained control
+deno run \
+  --allow-net=api.example.com:443 \
+  --allow-read=./uploads \
+  --allow-env=NODE_ENV,PORT \
+  server.ts</code></pre>
+
+                      <h2>When to Choose What: My Real-World Recommendations</h2>
+
+                      <div class="content-grid">
+                        <div class="row g-4">
+                          <div class="col-md-4">
+                            <div class="info-card">
+                              <h4>🟢 Choose Node.js When:</h4>
+                              <ul>
+                                <li><strong>Enterprise projects</strong> with established workflows</li>
+                                <li><strong>Large teams</strong> who know Node.js well</li>
+                                <li><strong>Complex dependencies</strong> that might not work elsewhere</li>
+                                <li><strong>Existing codebase</strong> migration risks</li>
+                                <li><strong>Long-term stability</strong> is priority #1</li>
+                              </ul>
+                              <p><strong>Perfect for:</strong> E-commerce platforms, enterprise APIs, legacy system integration</p>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="info-card">
+                              <h4>🔥 Choose Bun When:</h4>
+                              <ul>
+                                <li><strong>Performance matters</strong> and you need speed</li>
+                                <li><strong>Modern JavaScript/TypeScript</strong> projects</li>
+                                <li><strong>Fast development cycles</strong> with hot reload</li>
+                                <li><strong>Migrating from Node.js</strong> with minimal changes</li>
+                                <li><strong>Package installation</strong> is a bottleneck</li>
+                              </ul>
+                              <p><strong>Perfect for:</strong> APIs, microservices, development tooling, real-time applications</p>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="info-card">
+                              <h4>🦕 Choose Deno When:</h4>
+                              <ul>
+                                <li><strong>Security is critical</strong> (fintech, healthcare)</li>
+                                <li><strong>TypeScript-first</strong> development</li>
+                                <li><strong>Modern web standards</strong> matter</li>
+                                <li><strong>Simplicity over ecosystem</strong></li>
+                                <li><strong>Edge computing</strong> deployments</li>
+                              </ul>
+                              <p><strong>Perfect for:</strong> Serverless functions, secure APIs, modern web apps, CLI tools</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <h2>My Production Experience</h2>
+
+                      <p>
+                        Here's what I learned from actually deploying these in production:
+                      </p>
+
+                      <h3>Node.js (Main API - 50k daily users)</h3>
+                      <pre class="line-numbers"><code class="language-javascript">// What worked well:
+✅ Rock-solid stability
+✅ Huge community support  
+✅ Extensive monitoring tools
+✅ Team familiarity
+
+// Pain points:
+❌ Slow cold starts
+❌ npm dependency hell
+❌ TypeScript setup complexity
+❌ Memory usage can be high</code></pre>
+
+                      <h3>Bun (Microservice - 10k requests/min)</h3>
+                      <pre class="line-numbers"><code class="language-javascript">// What worked well:
+✅ 2x faster than Node.js
+✅ Instant TypeScript support
+✅ Lightning-fast package installs
+✅ Drop-in replacement for most code
+
+// Pain points:
+❌ Some npm packages don't work
+❌ Smaller community
+❌ Documentation gaps
+❌ New, less battle-tested</code></pre>
+
+                      <h3>Deno (Edge Functions - Serverless)</h3>
+                      <pre class="line-numbers"><code class="language-javascript">// What worked well:
+✅ Zero-config TypeScript
+✅ Excellent security model
+✅ Modern APIs out of the box
+✅ Great for serverless/edge
+
+// Pain points:
+❌ Limited ecosystem
+❌ Learning curve for imports
+❌ Some performance overhead
+❌ Less tooling integration</code></pre>
+
+                      <blockquote>
+                        <p>
+                          "The best JavaScript runtime is the one that gets your project shipped. Node.js for stability, Bun for speed, Deno for security and simplicity."
+                        </p>
+                      </blockquote>
+
+                      <h2>Quick Decision Framework</h2>
+
+                      <div class="highlight-box">
+                        <h3>🚀 The 30-Second Decision Tree</h3>
+
+                        <div class="content-grid">
+                          <div class="row g-3">
+                            <div class="col-md-4">
+                              <div class="info-card">
+                                <h4>Are you building for production?</h4>
+                                <p><strong>Yes:</strong> Node.js (safe choice)</p>
+                                <p><strong>No:</strong> Try Bun or Deno</p>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="info-card">
+                                <h4>Is performance critical?</h4>
+                                <p><strong>Yes:</strong> Bun</p>
+                                <p><strong>No:</strong> Any works</p>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="info-card">
+                                <h4>Do you love TypeScript?</h4>
+                                <p><strong>Yes:</strong> Deno or Bun</p>
+                                <p><strong>No:</strong> Node.js is fine</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <h2>The Bottom Line</h2>
+
+                      <p>
+                        After months of testing, here's my honest recommendation:
+                      </p>
+
+                      <ul>
+                        <li><strong>Starting a new project?</strong> Try Bun. It's Node.js but faster, with better TypeScript support.</li>
+                        <li><strong>Building something secure?</strong> Go with Deno. The security model alone is worth it.</li>
+                        <li><strong>Working on existing code?</strong> Stick with Node.js unless performance is a real problem.</li>
+                        <li><strong>Just learning?</strong> Pick any and focus on JavaScript fundamentals first.</li>
+                      </ul>
+
+                      <p>
+                        <strong>Final thought:</strong> The JavaScript runtime war isn't really a war – it's an evolution. We're getting better tools, and that benefits everyone. Pick the one that fits your project, not the one with the most hype.
+                      </p>
+
+                      <div class="highlight-box">
+                        <h3>🎯 My 2025 Recommendation</h3>
+                        <p>
+                          Try <strong>Bun</strong> for your next side project. It's the easiest way to experience the future of JavaScript development while keeping most of your Node.js knowledge relevant.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Tags and Share Section -->
+                    <div class="meta-bottom">
+                      <div class="tags-section">
+                        <h4>Related Topics</h4>
+                        <div class="tags">
+                          <span class="tag">Node.js</span>
+                          <span class="tag">Bun</span>
+                          <span class="tag">Deno</span>
+                          <span class="tag">JavaScript Runtime</span>
+                          <span class="tag">Performance</span>
+                          <span class="tag">TypeScript</span>
+                        </div>
+                      </div>
+
+                      <div class="share-section">
+                        <h4>Share Article</h4>
+                        <div class="social-links">
+                          <a
+                            href="https://twitter.com/intent/tweet?url=https://www.kripanshu.me/blog/posts/node-bun-deno/&text=Node.js%20vs%20Bun%20vs%20Deno:%20The%20Ultimate%20JavaScript%20Runtime%20Comparison%20by%20@kripanshu_singh&hashtags=NodeJS,Bun,Deno,JavaScript,WebDev"
+                            class="twitter"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Share on X (Twitter)"
+                            ><span style="font-weight: bold; font-size: 16px"
+                              >𝕏</span
+                            ></a
+                          >
+                          <a
+                            href="https://www.facebook.com/sharer/sharer.php?u=https://www.kripanshu.me/blog/posts/node-bun-deno/"
+                            class="facebook"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Share on Facebook"
+                            ><i class="bi bi-facebook"></i
+                          ></a>
+                          <a
+                            href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.kripanshu.me/blog/posts/node-bun-deno/"
+                            class="linkedin"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Share on LinkedIn"
+                            ><i class="bi bi-linkedin"></i
+                          ></a>
+                          <a
+                            href="#"
+                            class="copy-link"
+                            title="Copy Link"
+                            onclick="copyToClipboard('https://www.kripanshu.me/blog/posts/node-bun-deno/'); return false;"
+                            ><i class="bi bi-link-45deg"></i
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+            <!-- /Blog Details Section -->
+
+            <!-- Blog Author Section -->
+            <section id="blog-author" class="blog-author section">
+              <div class="container" data-aos="fade-up">
+                <div class="author-box" data-aos="fade-up" data-aos-delay="100">
+                  <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-4 text-center">
+                      <img
+                        src="/assets/img/img.png"
+                        class="author-img rounded-circle"
+                        alt="Kripanshu Singh"
+                        loading="lazy"
+                        data-aos="zoom-in"
+                        data-aos-delay="200"
+                      />
+
+                      <div class="author-social-links mt-3">
+                        <a
+                          href="https://github.com/kripanshu-singh"
+                          class="github"
+                          ><i class="bi bi-github"></i
+                        ></a>
+                        <a
+                          href="https://www.linkedin.com/in/kripanshu-singh/"
+                          class="linkedin"
+                          ><i class="bi bi-linkedin"></i
+                        ></a>
+                        <a
+                          href="mailto:kripanshusingh160305@gmail.com"
+                          class="email"
+                          ><i class="bi bi-envelope"></i
+                        ></a>
+                        <a href="https://www.kripanshu.me/" class="website"
+                          ><i class="bi bi-globe"></i
+                        ></a>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-9 col-md-8">
+                      <div class="author-content">
+                        <h3 class="author-name">Kripanshu Singh</h3>
+                        <span class="author-title"
+                          >Software Engineer &amp; Full Stack Developer</span
+                        >
+
+                        <div class="author-bio mt-3">
+                          <p>
+                            Software Engineer with expertise in backend APIs,
+                            authentication systems, and full-stack development.
+                            Previously contributed to India's national health
+                            registries at
+                            <strong>Aarogya ID</strong>, where I built scalable
+                            applications processing millions of requests and
+                            improved API response times by 40%.
+                          </p>
+
+                          <p>
+                            Currently seeking new opportunities while sharing
+                            practical insights from real-world development
+                            experience to help fellow developers make better
+                            technical decisions.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- /Blog Author Section -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/php-email-form/validate.js"></script>
+    <script src="../../assets/vendor/aos/aos.js"></script>
+    <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="../../../assets/js/main.js"></script>
+
+    <!-- Prism.js for syntax highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+
+    <!-- Enhanced Copy Button Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Apply line-numbers class to all code blocks
+        document.querySelectorAll("pre code").forEach(function (el) {
+          el.classList.add("line-numbers");
+        });
+
+        // Initialize Prism highlighting
+        Prism.highlightAll();
+
+        // Enhanced copy button functionality
+        setTimeout(function () {
+          // Add enhanced styling and behavior to copy buttons
+          document
+            .querySelectorAll(".code-toolbar .toolbar button")
+            .forEach((button) => {
+              // Set initial text
+              if (!button.textContent.trim()) {
+                button.textContent = "Copy";
+              }
+
+              // Enhanced copy success feedback
+              button.addEventListener("click", function () {
+                const originalText = this.textContent;
+                this.classList.add("copy-success");
+                this.textContent = "Copied!";
+
+                // Reset after 2 seconds
+                setTimeout(() => {
+                  this.classList.remove("copy-success");
+                  this.textContent = originalText;
+                }, 2000);
+              });
+
+              // Add hover effects
+              button.addEventListener("mouseenter", function () {
+                if (!this.classList.contains("copy-success")) {
+                  this.style.transform = "translateY(-1px)";
+                }
+              });
+
+              button.addEventListener("mouseleave", function () {
+                if (!this.classList.contains("copy-success")) {
+                  this.style.transform = "translateY(0)";
+                }
+              });
+            });
+
+          // Add keyboard shortcut for copying (Ctrl+C when code block is focused)
+          document
+            .querySelectorAll('pre[class*="language-"]')
+            .forEach((pre) => {
+              pre.setAttribute("tabindex", "0");
+
+              pre.addEventListener("keydown", function (e) {
+                if ((e.ctrlKey || e.metaKey) && e.key === "c") {
+                  e.preventDefault();
+                  const code = this.querySelector("code");
+                  if (code) {
+                    const text = code.textContent;
+                    navigator.clipboard.writeText(text).then(() => {
+                      // Show toast notification
+                      showCopyNotification("Code copied to clipboard!");
+                    });
+                  }
+                }
+              });
+            });
+        }, 100);
+
+        // Toast notification function
+        function showCopyNotification(message) {
+          const toast = document.createElement("div");
+          toast.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(76, 175, 80, 0.95);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            z-index: 10000;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          `;
+          toast.textContent = message;
+          document.body.appendChild(toast);
+
+          // Animate in
+          setTimeout(() => {
+            toast.style.transform = "translateX(0)";
+          }, 10);
+
+          // Animate out and remove
+          setTimeout(() => {
+            toast.style.transform = "translateX(100%)";
+            setTimeout(() => {
+              document.body.removeChild(toast);
+            }, 300);
+          }, 2000);
+        }
+      });
+
+      // Copy to clipboard function for share links
+      function copyToClipboard(text) {
+        navigator.clipboard
+          .writeText(text)
+          .then(() => {
+            showCopyNotification("Link copied to clipboard!");
+          })
+          .catch((err) => {
+            // Fallback for older browsers
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.position = "fixed";
+            textArea.style.left = "-999999px";
+            textArea.style.top = "-999999px";
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            document.execCommand("copy");
+            textArea.remove();
+            showCopyNotification("Link copied to clipboard!");
+          });
+      }
+    </script>
+  </body>
+</html>
