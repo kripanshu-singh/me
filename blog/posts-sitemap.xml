@@ -3,6 +3,28 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   
+  <!-- npm vs. Yarn vs. pnpm Package Manager Comparison -->
+  <url>
+    <loc>https://www.kripanshu.me/blog/posts/npm-yarn-pnpm/</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.kripanshu.me/blog/posts/npm-yarn-pnpm/assets/npm-yarn-pnpm.png</image:loc>
+      <image:title>npm vs. Yarn vs. pnpm Package Manager Comparison</image:title>
+      <image:caption>Complete comparison guide showing performance benchmarks, disk usage differences, security features, and real-world usage recommendations for npm, Yarn, and pnpm package managers</image:caption>
+    </image:image>
+    <news:news>
+      <news:publication>
+        <news:name>Kripanshu Singh Blog</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-08-29</news:publication_date>
+      <news:title>npm vs. Yarn vs. pnpm: The Ultimate Package Manager Comparison</news:title>
+      <news:keywords>npm, Yarn, pnpm, Package Manager Comparison, Performance Benchmarks, Disk Usage, Dependency Management, Node.js tools, JavaScript package managers, npm alternatives, pnpm performance</news:keywords>
+    </news:news>
+  </url>
+
   <!-- Node.js vs Bun vs Deno Runtime Comparison -->
   <url>
     <loc>https://www.kripanshu.me/blog/posts/node-bun-deno/</loc>

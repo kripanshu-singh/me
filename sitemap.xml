@@ -60,6 +60,18 @@
   
   <!-- Blog Posts (Spokes) -->
   <url>
+    <loc>https://www.kripanshu.me/blog/posts/npm-yarn-pnpm/</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.kripanshu.me/blog/posts/npm-yarn-pnpm/assets/npm-yarn-pnpm.png</image:loc>
+      <image:title>npm vs. Yarn vs. pnpm: The Ultimate Package Manager Comparison</image:title>
+      <image:caption>Complete comparison of npm, Yarn, and pnpm package managers with performance benchmarks, disk usage analysis, and real-world usage recommendations</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
     <loc>https://www.kripanshu.me/blog/posts/node-bun-deno/</loc>
     <lastmod>2025-08-29</lastmod>
     <changefreq>monthly</changefreq>

@@ -33,6 +33,36 @@
     </news:news>
   </url>
   
+    <!-- Blog Hub Page -->
+  <url>
+    <loc>https://www.kripanshu.me/blog/</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- npm vs. Yarn vs. pnpm Package Manager Guide -->
+  <url>
+    <loc>https://www.kripanshu.me/blog/posts/npm-yarn-pnpm/</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.kripanshu.me/blog/posts/npm-yarn-pnpm/assets/npm-yarn-pnpm.png</image:loc>
+      <image:title>npm vs. Yarn vs. pnpm: The Ultimate Package Manager Comparison</image:title>
+      <image:caption>Complete comparison of npm, Yarn, and pnpm package managers with performance benchmarks, disk usage analysis, and real-world usage recommendations</image:caption>
+    </image:image>
+    <news:news>
+      <news:publication>
+        <news:name>Kripanshu Singh Blog</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-08-29</news:publication_date>
+      <news:title>npm vs. Yarn vs. pnpm: The Ultimate Package Manager Comparison</news:title>
+      <news:keywords>npm, Yarn, pnpm, Package Manager, Performance Comparison, Node.js, JavaScript, Dependency Management, Disk Space</news:keywords>
+    </news:news>
+  </url>
+
   <!-- Node.js vs Bun vs Deno Guide -->
   <url>
     <loc>https://www.kripanshu.me/blog/posts/node-bun-deno/</loc>

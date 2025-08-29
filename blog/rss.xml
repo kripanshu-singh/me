@@ -10,12 +10,31 @@
     <webMaster>kripanshusingh160305@gmail.com (Kripanshu Singh)</webMaster>
     <lastBuildDate>Thu, 29 Aug 2025 00:00:00 GMT</lastBuildDate>
     <category>Software Development</category>
+    <category>Package Managers</category>
     <category>JavaScript</category>
     <category>Authentication</category>
     <category>API Security</category>
     <ttl>60</ttl>
     
-    <!-- Latest Post: Node.js vs Bun vs Deno Comparison -->
+    <!-- Latest Post: npm vs. Yarn vs. pnpm Comparison -->
+    <item>
+      <title><![CDATA[npm vs. Yarn vs. pnpm: The Ultimate Package Manager Comparison]]></title>
+      <description><![CDATA[Complete comparison of npm vs. Yarn vs. pnpm package managers. Performance benchmarks, disk usage analysis, security features, and real-world usage recommendations from production experience. Learn which package manager to choose for your next project.]]></description>
+      <link>https://www.kripanshu.me/blog/posts/npm-yarn-pnpm/</link>
+      <guid isPermaLink="true">https://www.kripanshu.me/blog/posts/npm-yarn-pnpm/</guid>
+      <pubDate>Thu, 29 Aug 2025 00:00:00 GMT</pubDate>
+      <category><![CDATA[Package Managers]]></category>
+      <category><![CDATA[npm]]></category>
+      <category><![CDATA[Yarn]]></category>
+      <category><![CDATA[pnpm]]></category>
+      <category><![CDATA[Performance]]></category>
+      <category><![CDATA[Node.js]]></category>
+      <category><![CDATA[JavaScript]]></category>
+      <author>kripanshusingh160305@gmail.com (Kripanshu Singh)</author>
+      <enclosure url="https://www.kripanshu.me/blog/posts/npm-yarn-pnpm/assets/npm-yarn-pnpm.png" length="0" type="image/png"/>
+    </item>
+    
+    <!-- Node.js vs Bun vs Deno Comparison -->
     <item>
       <title><![CDATA[Node.js vs Bun vs Deno: The Ultimate JavaScript Runtime Comparison]]></title>
       <description><![CDATA[Complete comparison of Node.js vs Bun vs Deno JavaScript runtimes. Performance benchmarks, features, package management, TypeScript support, and real-world usage recommendations from production experience. Learn which runtime to choose for your next project.]]></description>
