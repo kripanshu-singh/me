@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Portfolio Details - Personal Bootstrap Template</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- <main id="main"> -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper" id="myDiv">
+              <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/lost-and-found-1.png" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/lost-and-found-3.png" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/lost-and-found-2.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project Live URL</h3>
+              <ul>
+                <li>
+                  <strong>Project URL</strong>:
+                  <a target="_blank" href="https://claim-management.vercel.app/"
+                    >Lost and Found</a
+                  >
+                </li>
+              </ul>
+
+              <div
+                style="border-top: 2px solid #ff9e00; margin-bottom: 1.2rem"
+              ></div>
+              <h2>Project information</h2>
+              <div class="overflow-auto divlol" id="loln">
+                <!-- <p> -->
+                <ul id="ulid">
+                  <li style="text-align: justify">
+                    Lost and Found is a comprehensive React Native mobile
+                    application built with Expo that helps users report, search,
+                    and claim lost items within a campus environment. The app
+                    facilitates the process of reuniting lost items with their
+                    owners through a streamlined reporting and claiming
+                    workflow.
+                  </li>
+                </ul>
+                <!-- </p> -->
+                <ul id="ulid">
+                  <strong>Key Features:</strong>
+                  <li style="text-align: justify">
+                    <b>User Authentication:</b>
+                    Secure sign-up and login functionality to ensure user
+                    privacy and data security.
+                  </li>
+                  <li style="text-align: justify">
+                    <b>Lost Item Reporting:</b> Users can report lost items by
+                    providing details such as item description, location, date,
+                    and contact information.
+                  </li>
+                  <li style="text-align: justify">
+                    <b>Search Functionality:</b> Users can search for lost items
+                    using keywords, categories, or filters to quickly find
+                    relevant reports.
+                  </li>
+                  <li style="text-align: justify">
+                    <b>Claiming Process:</b> Users can claim found items by
+                    providing proof of ownership and contacting the reporter.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Portfolio Details Section -->
+
+    <!-- </main> -->
+    <!-- End #main -->
+
+    <div id="preloader"></div>
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/typed.js/typed.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script>
+      var clientHeight = document.getElementById("myDiv").clientHeight;
+      let text2 = "px";
+      let text3 = (clientHeight - 212).toString().concat(text2);
+      if (screen.width > 1101) {
+        document.getElementById("loln").style.height = text3;
+        document.getElementById("ulid").style.cssText = "padding-right: 10px;";
+        var element = document.getElementById("portfolio-details");
+        element.classList.add(
+          "position-absolute",
+          "top-50",
+          "start-50",
+          "translate-middle",
+        );
+      }
+    </script>
+  </body>
+</html>
