@@ -95,6 +95,55 @@
   --url: url("../img/select/git.png");
 }
 
+/* New skills added: React Native, AI, N8N, Agents SDK, Lang Graph, LangChain */
+.reactnativelol {
+  --bg-color: #61dafb33; /* React cyan translucent */
+  --bg-color-light: #eafcff;
+  --text-color-hover: #05314a;
+  --box-shadow-color: #61dafb66;
+  --url: url("../img/select/rec.png");
+}
+
+.ailol {
+  --bg-color: #8cfba4;
+  --bg-color-light: #e2fced;
+  --text-color-hover: #4c5656;
+  --box-shadow-color: #10da3c8b;
+  --url: url("../img/select/ml.png");
+}
+
+.n8nlol {
+  --bg-color: #e21e4f91;
+  --bg-color-light: #ffffff;
+  --text-color-hover: #0000009d;
+  --box-shadow-color: #ff00406c;
+  --url: url("../img/select/n8n.png");
+}
+
+.agentslol {
+  --bg-color: #000000a6; /* dark navy for LangChain */
+  --bg-color-light: #f1f5f9;
+  --text-color-hover: #ffffff;
+  --box-shadow-color: #00000099;
+  --url: url("../img/select/ai-sdk.png");
+}
+
+.langgraphlol {
+  --bg-color: #00c2a8aa; /* mint green */
+  --bg-color-light: #ecfffb;
+  --text-color-hover: #05362e;
+  --box-shadow-color: #00c2a88a;
+  --url: url("../img/select/langgraph.png");
+}
+
+.langchainlol {
+  --bg-color: #000000c8; /* dark navy for LangChain */
+  --bg-color-light: #f1f5f9;
+  --text-color-hover: #ffffff;
+  --box-shadow-color: #0f172a99;
+  --url: url("../img/select/lang-chain.png");
+}
+
 .glol {
   --bg-color: #9dc58a;
   --bg-color-light: #f0e7ff;
