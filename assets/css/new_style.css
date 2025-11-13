@@ -129,10 +129,10 @@
 }
 
 .langgraphlol {
-  --bg-color: #00c2a8aa; /* mint green */
+  --bg-color: #1d3c3cc0; /* mint green */
   --bg-color-light: #ecfffb;
   --text-color-hover: #05362e;
-  --box-shadow-color: #00c2a88a;
+  --box-shadow-color: #1d3c3c96;
   --url: url("../img/select/langgraph.png");
 }
 
@@ -142,6 +142,38 @@
   --text-color-hover: #ffffff;
   --box-shadow-color: #0f172a99;
   --url: url("../img/select/lang-chain.png");
+}
+
+/* Philosophy box styling for About section */
+.philosophy {
+  background: linear-gradient(
+    90deg,
+    rgba(5, 99, 187, 0.06),
+    rgba(214, 202, 244, 0.03)
+  );
+  border-left: 4px solid #0563bb; /* accent color */
+  padding: 14px 18px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(5, 99, 187, 0.04);
+  font-size: 0.98rem;
+  color: #23323a;
+  margin-bottom: 16px;
+}
+
+.philosophy p {
+  margin: 6px 0;
+  line-height: 1.35;
+}
+
+.philosophy strong {
+  color: #054a8a;
+}
+
+@media (max-width: 576px) {
+  .philosophy {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
 }
 
 .glol {
